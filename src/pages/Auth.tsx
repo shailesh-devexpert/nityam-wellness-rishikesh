@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Separator } from '@/components/ui/separator';
 import { useAuth } from '@/hooks/useAuth';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Leaf, Flower2, Sun } from 'lucide-react';
 
 export default function Auth() {
   const [isLoading, setIsLoading] = useState(false);
@@ -50,13 +50,27 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/20 via-background to-secondary/20 p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            Nityam Wellness
-          </CardTitle>
-          <CardDescription>
+    <div className="min-h-screen flex items-center justify-center animated-bg p-4 relative overflow-hidden">
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 text-primary/10 animate-float">
+        <Flower2 className="h-16 w-16" />
+      </div>
+      <div className="absolute bottom-20 right-20 text-lotus/10 animate-float" style={{ animationDelay: '2s' }}>
+        <Sun className="h-12 w-12" />
+      </div>
+      
+      <Card className="w-full max-w-md shadow-2xl bg-card/95 backdrop-blur-sm border border-primary/20 hover-lift">
+        <CardHeader className="text-center space-y-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Leaf className="h-10 w-10 text-primary animate-float" />
+            <div>
+              <CardTitle className="text-3xl font-heading font-bold bg-gradient-to-r from-primary via-secondary-warm to-earth bg-clip-text text-transparent">
+                Nityam Wellness
+              </CardTitle>
+              <p className="text-xs text-muted-foreground font-accent">Ancient Wisdom • Modern Healing</p>
+            </div>
+          </div>
+          <CardDescription className="text-lg font-accent">
             Welcome to your wellness journey
           </CardDescription>
         </CardHeader>
@@ -96,7 +110,9 @@ export default function Auth() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full" 
+                  className="w-full hover-lift" 
+                  size="lg"
+                  variant="gradient"
                   disabled={isLoading}
                 >
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -146,7 +162,9 @@ export default function Auth() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full" 
+                  className="w-full hover-lift" 
+                  size="lg"
+                  variant="gradient"
                   disabled={isLoading}
                 >
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
