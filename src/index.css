@@ -8,51 +8,73 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Traditional Indian color palette */
+    --background: 45 100% 97%;
+    --foreground: 25 20% 15%;
+    --card: 45 100% 99%;
+    --card-foreground: 25 20% 15%;
+    --popover: 45 100% 99%;
+    --popover-foreground: 25 20% 15%;
+    
+    /* Saffron-inspired primary */
+    --primary: 25 95% 53%;
+    --primary-foreground: 45 100% 99%;
+    --primary-light: 25 95% 65%;
+    --primary-dark: 25 95% 40%;
+    
+    /* Terracotta secondary */
+    --secondary: 15 65% 85%;
+    --secondary-foreground: 25 20% 15%;
+    --secondary-warm: 15 85% 65%;
+    
+    /* Sage green accent */
+    --accent: 120 25% 85%;
+    --accent-foreground: 25 20% 15%;
+    --accent-sage: 120 35% 45%;
+    
+    /* Warm neutrals */
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 25 95% 53%;
+    
+    /* Traditional gold accents */
+    --gold: 45 90% 55%;
+    --gold-light: 45 90% 75%;
+    --gold-dark: 45 90% 35%;
+    
+    /* Earthy browns */
+    --earth: 25 35% 35%;
+    --earth-light: 25 35% 55%;
+    --earth-dark: 25 35% 25%;
+    
+    /* Sacred lotus pink */
+    --lotus: 340 50% 75%;
+    --lotus-deep: 340 60% 55%;
+    
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 45 100% 99%;
+    
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-warm)) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth-light)) 0%, hsl(var(--earth-dark)) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--gold)) 50%, hsl(var(--lotus)) 100%);
+    
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-soft: 0 4px 20px -2px hsl(var(--earth) / 0.1);
+    
+    --sidebar-background: 45 100% 98%;
+    --sidebar-foreground: 25 20% 15%;
+    --sidebar-primary: 25 95% 53%;
+    --sidebar-primary-foreground: 45 100% 99%;
+    --sidebar-accent: 35 20% 90%;
+    --sidebar-accent-foreground: 25 20% 15%;
+    --sidebar-border: 35 15% 85%;
+    --sidebar-ring: 25 95% 53%;
   }
 
   .dark {
@@ -101,5 +123,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Custom utility classes */
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+
+  /* Scroll behavior */
+  html {
+    scroll-behavior: smooth;
   }
 }
