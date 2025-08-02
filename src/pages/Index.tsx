@@ -183,71 +183,100 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section with Beautiful Animation */}
+      {/* Hero Slider Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent"></div>
-          <div className="absolute inset-0 animated-bg opacity-30"></div>
+        <div className="absolute inset-0 hero-slider"></div>
+        
+        {/* Image Slider Background */}
+        <div className="absolute inset-0">
+          <div className="relative w-full h-full">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+              style={{
+                backgroundImage: `url(${heroImage})`,
+                opacity: 0.4
+              }}
+            ></div>
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+              style={{
+                backgroundImage: `url(${yogaImg})`,
+                opacity: 0.3,
+                animationDelay: '5s'
+              }}
+            ></div>
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+              style={{
+                backgroundImage: `url(${soundHealingImg})`,
+                opacity: 0.3,
+                animationDelay: '10s'
+              }}
+            ></div>
+          </div>
         </div>
         
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 text-primary/20 animate-float" style={{ animationDelay: '0s' }}>
-          <Flower2 className="h-16 w-16" />
-        </div>
-        <div className="absolute top-40 right-20 text-lotus/20 animate-float" style={{ animationDelay: '2s' }}>
-          <Sun className="h-12 w-12" />
-        </div>
-        <div className="absolute bottom-40 left-20 text-accent-sage/20 animate-float" style={{ animationDelay: '4s' }}>
-          <Mountain className="h-14 w-14" />
-        </div>
-
+        {/* Mystical Floating Elements */}
+        <div className="absolute top-20 left-10 w-24 h-24 bg-gradient-aurora rounded-full animate-float opacity-60 blur-sm"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-cosmic rounded-full animate-float opacity-40 blur-md" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-40 left-20 w-20 h-20 bg-lotus/30 rounded-full animate-float opacity-70" style={{animationDelay: '6s'}}></div>
+        <div className="absolute top-60 left-1/3 w-16 h-16 bg-gold/40 rounded-full animate-float opacity-50" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-60 right-1/3 w-28 h-28 bg-secondary-warm/20 rounded-full animate-float opacity-60" style={{animationDelay: '4s'}}></div>
+        
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-6xl md:text-8xl font-heading font-bold mb-8 animate-fade-in-up">
-              <span className="bg-gradient-to-r from-primary via-secondary-warm to-gold bg-clip-text text-transparent animate-glow">
-                Ancient Wisdom
+        <div className="container mx-auto px-4 relative z-10 text-center text-white">
+          <div className="animate-fade-in-up max-w-5xl mx-auto">
+            <div className="mb-6">
+              <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-md rounded-full text-gold font-accent text-lg mb-4 border border-white/20">
+                ✨ Sacred Himalayan Sanctuary ✨
               </span>
-              <br />
-              <span className="bg-gradient-to-r from-earth via-accent-sage to-lotus bg-clip-text text-transparent">
-                Modern Healing
-              </span>
+            </div>
+            <h1 className="font-heading text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-gold via-lotus to-secondary-warm bg-clip-text text-transparent animate-glow leading-tight">
+              Mystical Healing Arts of Rishikesh
             </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto font-accent animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Experience authentic Ayurvedic treatments in the spiritual heart of Rishikesh. 
-              Your journey to holistic wellness begins here, where ancient wisdom meets modern comfort.
+            <p className="text-2xl md:text-3xl mb-10 font-accent max-w-4xl mx-auto leading-relaxed text-white/90 backdrop-blur-sm">
+              Embark on a transcendent journey through ancient Ayurvedic wisdom, soul-stirring yoga practices, and profound spiritual awakening in the sacred valley of the Himalayas
             </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button size="lg" className="bg-gradient-aurora hover:bg-gradient-cosmic text-white font-bold px-12 py-6 rounded-full transform transition-all duration-500 hover:scale-110 shadow-2xl border-2 border-white/20 backdrop-blur-sm">
+                🕉️ Begin Sacred Journey
+              </Button>
+              <Button variant="outline" size="lg" className="border-2 border-gold/60 text-gold hover:bg-gold/20 backdrop-blur-md px-12 py-6 rounded-full transition-all duration-300 hover:border-gold">
+                🧘‍♀️ Explore Mystical Arts
+              </Button>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <Button size="xl" variant="gradient" className="text-xl px-12 py-8 shadow-warm hover-lift">
-                <Phone className="mr-3 h-6 w-6" />
-                Book Your Journey
-              </Button>
-              <Button variant="outline" size="xl" className="text-xl px-12 py-8 hover-lift border-2">
-                <Sparkles className="mr-3 h-6 w-6" />
-                Discover More
-              </Button>
+            {/* Slider Indicators */}
+            <div className="flex justify-center space-x-3 mt-12">
+              <div className="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-white/50 rounded-full"></div>
+              <div className="w-3 h-3 bg-lotus/70 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mt-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-primary">5000+</div>
-                <div className="text-sm md:text-base text-muted-foreground">Years of Wisdom</div>
+                <div className="text-3xl md:text-4xl font-heading font-bold text-gold">5000+</div>
+                <div className="text-sm md:text-base text-white/80">Years of Wisdom</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-accent-sage">1000+</div>
-                <div className="text-sm md:text-base text-muted-foreground">Lives Transformed</div>
+                <div className="text-3xl md:text-4xl font-heading font-bold text-secondary-warm">1000+</div>
+                <div className="text-sm md:text-base text-white/80">Lives Transformed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-secondary-warm">100%</div>
-                <div className="text-sm md:text-base text-muted-foreground">Natural Healing</div>
+                <div className="text-3xl md:text-4xl font-heading font-bold text-lotus">100%</div>
+                <div className="text-sm md:text-base text-white/80">Natural Healing</div>
               </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce">
+          <div className="flex flex-col items-center">
+            <span className="text-sm font-accent mb-2">Discover More</span>
+            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
         </div>

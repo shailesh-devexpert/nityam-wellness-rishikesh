@@ -10,60 +10,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Traditional Indian color palette */
-    --background: 45 100% 97%;
-    --foreground: 25 20% 15%;
-    --card: 45 100% 99%;
-    --card-foreground: 25 20% 15%;
-    --popover: 45 100% 99%;
-    --popover-foreground: 25 20% 15%;
+    /* Mystical Aurora-inspired color palette */
+    --background: 240 100% 98%;
+    --foreground: 240 15% 15%;
+    --card: 240 100% 99%;
+    --card-foreground: 240 15% 15%;
+    --popover: 240 100% 99%;
+    --popover-foreground: 240 15% 15%;
     
-    /* Saffron-inspired primary */
-    --primary: 25 95% 53%;
-    --primary-foreground: 45 100% 99%;
-    --primary-light: 25 95% 65%;
-    --primary-dark: 25 95% 40%;
+    /* Deep cosmic purple primary */
+    --primary: 260 85% 45%;
+    --primary-foreground: 240 100% 99%;
+    --primary-light: 260 85% 65%;
+    --primary-dark: 260 85% 25%;
     
-    /* Terracotta secondary */
-    --secondary: 15 65% 85%;
-    --secondary-foreground: 25 20% 15%;
-    --secondary-warm: 15 85% 65%;
+    /* Aurora cyan secondary */
+    --secondary: 180 100% 85%;
+    --secondary-foreground: 240 15% 15%;
+    --secondary-warm: 180 85% 55%;
     
-    /* Sage green accent */
-    --accent: 120 25% 85%;
-    --accent-foreground: 25 20% 15%;
-    --accent-sage: 120 35% 45%;
+    /* Mystical teal accent */
+    --accent: 175 85% 85%;
+    --accent-foreground: 240 15% 15%;
+    --accent-sage: 175 65% 35%;
     
-    /* Warm neutrals */
-    --muted: 35 20% 90%;
-    --muted-foreground: 25 15% 45%;
-    --border: 35 15% 85%;
-    --input: 35 15% 85%;
-    --ring: 25 95% 53%;
+    /* Cool neutrals */
+    --muted: 240 15% 92%;
+    --muted-foreground: 240 10% 45%;
+    --border: 240 10% 88%;
+    --input: 240 10% 88%;
+    --ring: 260 85% 45%;
     
-    /* Traditional gold accents */
-    --gold: 45 90% 55%;
-    --gold-light: 45 90% 75%;
-    --gold-dark: 45 90% 35%;
+    /* Cosmic gold accents */
+    --gold: 45 100% 65%;
+    --gold-light: 45 100% 85%;
+    --gold-dark: 45 100% 45%;
     
-    /* Earthy browns */
-    --earth: 25 35% 35%;
-    --earth-light: 25 35% 55%;
-    --earth-dark: 25 35% 25%;
+    /* Deep space blues */
+    --earth: 220 45% 25%;
+    --earth-light: 220 45% 45%;
+    --earth-dark: 220 45% 15%;
     
-    /* Sacred lotus pink */
-    --lotus: 340 50% 75%;
-    --lotus-deep: 340 60% 55%;
+    /* Aurora pink */
+    --lotus: 310 70% 65%;
+    --lotus-deep: 310 70% 45%;
     
-    --destructive: 0 65% 51%;
-    --destructive-foreground: 45 100% 99%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 240 100% 99%;
     
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-warm)) 100%);
-    --gradient-earth: linear-gradient(135deg, hsl(var(--earth-light)) 0%, hsl(var(--earth-dark)) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--gold)) 50%, hsl(var(--lotus)) 100%);
+    /* Mystical Gradients */
+    --gradient-aurora: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary-warm)) 30%, hsl(var(--lotus)) 70%, hsl(var(--gold)) 100%);
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--earth-dark)) 0%, hsl(var(--primary)) 50%, hsl(var(--lotus-deep)) 100%);
+    --gradient-mystical: linear-gradient(120deg, hsl(var(--primary-dark)) 0%, hsl(var(--secondary-warm)) 25%, hsl(var(--lotus)) 50%, hsl(var(--gold-light)) 75%, hsl(var(--primary-light)) 100%);
     
     /* Shadows */
     --shadow-warm: 0 10px 30px -10px hsl(var(--primary) / 0.2);
@@ -146,29 +146,40 @@ All colors MUST be HSL.
     box-shadow: 0 0 40px hsl(var(--primary) / 0.3);
   }
   
-  /* Gradient backgrounds */
-  .bg-gradient-warm {
-    background: var(--gradient-warm);
+  /* Mystical gradient backgrounds */
+  .bg-gradient-aurora {
+    background: var(--gradient-aurora);
   }
   
-  .bg-gradient-sunset {
-    background: var(--gradient-sunset);
+  .bg-gradient-cosmic {
+    background: var(--gradient-cosmic);
   }
   
-  .bg-gradient-earth {
-    background: var(--gradient-earth);
+  .bg-gradient-mystical {
+    background: var(--gradient-mystical);
   }
   
-  /* Animated backgrounds */
+  /* Animated mystical backgrounds */
   .animated-bg {
     background: linear-gradient(-45deg, 
-      hsl(var(--primary) / 0.1), 
-      hsl(var(--secondary-warm) / 0.1), 
-      hsl(var(--accent) / 0.1), 
-      hsl(var(--lotus) / 0.1)
+      hsl(var(--primary) / 0.15), 
+      hsl(var(--secondary-warm) / 0.15), 
+      hsl(var(--lotus) / 0.15), 
+      hsl(var(--gold) / 0.15),
+      hsl(var(--accent-sage) / 0.15)
     );
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background-size: 500% 500%;
+    animation: gradientShift 20s ease infinite;
+  }
+  
+  .hero-slider {
+    background: linear-gradient(45deg, 
+      hsl(var(--primary-dark) / 0.9), 
+      hsl(var(--secondary-warm) / 0.8), 
+      hsl(var(--lotus-deep) / 0.7)
+    );
+    background-size: 300% 300%;
+    animation: gradientShift 25s ease infinite;
   }
   
   /* Text animations */
