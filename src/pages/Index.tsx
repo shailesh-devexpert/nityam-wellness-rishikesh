@@ -4,11 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { useAuth } from '@/hooks/useAuth';
 import { Loader2, LogOut, Leaf, Star, Quote, Phone, Heart, Flower2, Sun, Mountain, Sparkles, Users, MapPin, Mail } from 'lucide-react';
-import heroImage from '@/assets/hero-bg.jpg';
-import panchakarmaImg from '@/assets/panchakarma.jpg';
-import abhyangaImg from '@/assets/abhyanga.jpg';
-import shirodaraImg from '@/assets/shirodhara.jpg';
-import yogaImg from '@/assets/yoga-meditation.jpg';
+import heroImage from '@/assets/rishikesh-hero.jpg';
+import panchakarmaImg from '@/assets/panchakarma-rishikesh.jpg';
+import abhyangaImg from '@/assets/abhyanga-rishikesh.jpg';
+import shirodaraImg from '@/assets/shirodhara-rishikesh.jpg';
+import yogaImg from '@/assets/yoga-rishikesh.jpg';
+import soundHealingImg from '@/assets/sound-healing.jpg';
 import testimonial1 from '@/assets/testimonial-1.jpg';
 import testimonial2 from '@/assets/testimonial-2.jpg';
 import testimonial3 from '@/assets/testimonial-3.jpg';
@@ -315,6 +316,135 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Sound Healing Section - Big Featured Section */}
+      <section className="py-40 bg-gradient-to-br from-primary/10 via-accent/5 to-lotus/10 relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 text-primary/10 animate-float">
+          <Sun className="h-32 w-32" />
+        </div>
+        <div className="absolute bottom-20 right-10 text-accent-sage/10 animate-float" style={{ animationDelay: '2s' }}>
+          <Sparkles className="h-24 w-24" />
+        </div>
+        
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative animate-fade-in-up">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl hover-lift">
+                <img 
+                  src={soundHealingImg} 
+                  alt="Sound Healing Therapy" 
+                  className="w-full h-[500px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-primary/20"></div>
+                
+                {/* Floating badges */}
+                <div className="absolute top-6 left-6 bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                  Featured Therapy
+                </div>
+                <div className="absolute bottom-6 right-6 bg-white/90 text-primary px-4 py-2 rounded-full text-sm font-bold">
+                  ₹2,500/session
+                </div>
+              </div>
+            </div>
+            
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="mb-6">
+                <span className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                  Healing Vibrations
+                </span>
+                <h2 className="text-6xl md:text-7xl font-heading font-bold mb-8">
+                  <span className="bg-gradient-to-r from-primary via-gold to-secondary-warm bg-clip-text text-transparent">
+                    Sound Healing
+                  </span>
+                  <br />
+                  <span className="bg-gradient-to-r from-accent-sage via-earth to-lotus bg-clip-text text-transparent text-5xl">
+                    Therapy
+                  </span>
+                </h2>
+              </div>
+              
+              <p className="text-xl text-muted-foreground mb-8 font-accent leading-relaxed">
+                Experience the profound healing power of ancient sound vibrations. Our certified sound healers use 
+                traditional Tibetan singing bowls, crystal bowls, and sacred chants to restore harmony to your 
+                entire being.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Heart className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground">Deep Relaxation</div>
+                    <div className="text-sm text-muted-foreground">Releases stress & tension</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-accent-sage/10 p-2 rounded-full">
+                    <Sparkles className="h-5 w-5 text-accent-sage" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground">Energy Balancing</div>
+                    <div className="text-sm text-muted-foreground">Restores chakra harmony</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-secondary-warm/10 p-2 rounded-full">
+                    <Mountain className="h-5 w-5 text-secondary-warm" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground">Mental Clarity</div>
+                    <div className="text-sm text-muted-foreground">Enhances focus & peace</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-lotus/10 p-2 rounded-full">
+                    <Sun className="h-5 w-5 text-lotus-deep" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground">Spiritual Awakening</div>
+                    <div className="text-sm text-muted-foreground">Connects to higher self</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-primary/5 p-6 rounded-2xl mb-8">
+                <h4 className="font-heading font-bold text-lg mb-3 text-foreground">What to Expect:</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-primary" />
+                    60-minute immersive sound journey
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-primary" />
+                    Multiple healing instruments & frequencies
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-primary" />
+                    Personalized intention setting
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-primary" />
+                    Post-session integration guidance
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="xl" variant="gradient" className="text-lg px-8 py-6 hover-lift">
+                  <Phone className="mr-3 h-5 w-5" />
+                  Book Sound Healing
+                </Button>
+                <Button variant="outline" size="xl" className="text-lg px-8 py-6 hover-lift border-2">
+                  <Sparkles className="mr-3 h-5 w-5" />
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Signature Treatments - Enhanced */}
       <section className="py-32 bg-gradient-to-br from-accent/5 to-primary/5">
         <div className="container mx-auto px-6">
@@ -430,61 +560,124 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials with Photos */}
-      <section className="py-32 bg-pattern">
+      {/* Beautiful Reviews Section */}
+      <section className="py-40 bg-gradient-to-br from-lotus/5 via-background to-accent/5 relative overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 text-primary/5 animate-float">
+          <Quote className="h-40 w-40" />
+        </div>
+        <div className="absolute bottom-20 right-10 text-gold/5 animate-float" style={{ animationDelay: '3s' }}>
+          <Heart className="h-32 w-32" />
+        </div>
+        
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-5xl md:text-6xl font-heading font-bold mb-6">
-              <span className="bg-gradient-to-r from-primary via-gold to-secondary-warm bg-clip-text text-transparent">
+            <span className="inline-block bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-medium mb-6">
+              Real Transformations
+            </span>
+            <h2 className="text-6xl md:text-7xl font-heading font-bold mb-8">
+              <span className="bg-gradient-to-r from-primary via-gold to-lotus bg-clip-text text-transparent">
                 Healing Stories
               </span>
+              <br />
+              <span className="bg-gradient-to-r from-accent-sage via-secondary-warm to-earth bg-clip-text text-transparent text-5xl">
+                That Inspire
+              </span>
             </h2>
-            <p className="text-xl text-muted-foreground font-accent">
-              Real transformations from our wellness community
+            <p className="text-xl text-muted-foreground font-accent max-w-3xl mx-auto leading-relaxed">
+              Discover how ancient Ayurvedic wisdom has transformed lives and restored 
+              balance to mind, body, and spirit
             </p>
           </div>
           
-          <Carousel className="max-w-6xl mx-auto">
+          {/* Stats Section */}
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-8 mb-16 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-heading font-bold text-primary mb-2">1000+</div>
+              <div className="text-sm text-muted-foreground">Lives Transformed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-heading font-bold text-gold mb-2">98%</div>
+              <div className="text-sm text-muted-foreground">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-heading font-bold text-accent-sage mb-2">4.9★</div>
+              <div className="text-sm text-muted-foreground">Average Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-heading font-bold text-secondary-warm mb-2">50+</div>
+              <div className="text-sm text-muted-foreground">Countries</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-heading font-bold text-lotus-deep mb-2">15+</div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
+            </div>
+          </div>
+          
+          <Carousel className="max-w-7xl mx-auto">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index}>
-                  <Card className="mx-4 overflow-hidden bg-card/80 backdrop-blur-sm border border-primary/10 hover-lift">
+                <CarouselItem key={index} className="md:basis-1/1">
+                  <Card className="mx-4 overflow-hidden bg-gradient-to-br from-card/90 to-primary/5 backdrop-blur-lg border border-primary/20 hover-lift shadow-2xl">
                     <CardContent className="p-12">
-                      <div className="grid md:grid-cols-3 gap-8 items-center">
-                        {/* Photo */}
-                        <div className="text-center">
-                          <div className="relative">
-                            <img 
-                              src={testimonial.image} 
-                              alt={testimonial.name}
-                              className="w-32 h-32 rounded-full object-cover mx-auto shadow-2xl"
-                            />
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent"></div>
+                      <div className="grid md:grid-cols-4 gap-8 items-center">
+                        {/* Enhanced Photo Section */}
+                        <div className="text-center md:col-span-1">
+                          <div className="relative inline-block">
+                            <div className="w-36 h-36 rounded-full bg-gradient-to-tr from-primary/20 to-gold/20 p-1">
+                              <img 
+                                src={testimonial.image} 
+                                alt={testimonial.name}
+                                className="w-full h-full rounded-full object-cover shadow-2xl"
+                              />
+                            </div>
+                            <div className="absolute -top-2 -right-2 bg-gold text-white rounded-full p-2">
+                              <Heart className="h-4 w-4" />
+                            </div>
                           </div>
                           
                           <div className="flex justify-center mt-6 mb-4">
                             {[...Array(testimonial.rating)].map((_, i) => (
-                              <Star key={i} className="h-5 w-5 text-gold fill-current" />
+                              <Star key={i} className="h-6 w-6 text-gold fill-current animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                             ))}
                           </div>
                           
-                          <h4 className="font-heading font-bold text-xl text-foreground">{testimonial.name}</h4>
-                          <p className="text-muted-foreground font-medium">{testimonial.location}</p>
+                          <h4 className="font-heading font-bold text-xl text-foreground mb-1">{testimonial.name}</h4>
+                          <p className="text-muted-foreground font-medium flex items-center justify-center gap-1">
+                            <MapPin className="h-4 w-4" />
+                            {testimonial.location}
+                          </p>
+                          
+                          <div className="mt-4 inline-flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span className="text-xs font-medium text-primary">Verified Guest</span>
+                          </div>
                         </div>
                         
-                        {/* Testimonial */}
-                        <div className="md:col-span-2">
-                          <Quote className="h-12 w-12 text-primary/30 mb-6" />
-                          <p className="text-xl font-accent italic text-muted-foreground leading-relaxed mb-6">
-                            "{testimonial.text}"
-                          </p>
-                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                            <span className="flex items-center gap-1">
-                              <MapPin className="h-4 w-4" />
-                              Verified Guest
-                            </span>
-                            <span className="w-1 h-1 bg-muted-foreground rounded-full"></span>
-                            <span>Transformed Life</span>
+                        {/* Enhanced Testimonial */}
+                        <div className="md:col-span-3">
+                          <div className="relative">
+                            <Quote className="h-16 w-16 text-primary/20 mb-6" />
+                            <div className="bg-gradient-to-r from-primary/5 to-lotus/5 p-8 rounded-3xl">
+                              <p className="text-2xl font-accent italic text-foreground leading-relaxed mb-8">
+                                "{testimonial.text}"
+                              </p>
+                              
+                              <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+                                <span className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                                  <Sparkles className="h-4 w-4" />
+                                  Life Transformation
+                                </span>
+                                <span className="flex items-center gap-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                                  <Heart className="h-4 w-4" />
+                                  Authentic Healing
+                                </span>
+                                <span className="flex items-center gap-2 bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+                                  <Sun className="h-4 w-4" />
+                                  Spiritual Growth
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -493,9 +686,20 @@ const Index = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="border-primary/20 hover:bg-primary/10" />
-            <CarouselNext className="border-primary/20 hover:bg-primary/10" />
+            <CarouselPrevious className="border-primary/30 hover:bg-primary/20 -left-12" />
+            <CarouselNext className="border-primary/30 hover:bg-primary/20 -right-12" />
           </Carousel>
+          
+          {/* Call to Action */}
+          <div className="text-center mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <p className="text-lg text-muted-foreground mb-8 font-accent">
+              Ready to write your own transformation story?
+            </p>
+            <Button size="xl" variant="gradient" className="text-lg px-10 py-6 hover-lift">
+              <Heart className="mr-3 h-5 w-5" />
+              Start Your Healing Journey
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -616,63 +820,179 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Beautiful Footer */}
-      <footer className="bg-earth text-earth-light py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-6">
-                <Leaf className="h-8 w-8 text-primary" />
-                <div>
-                  <h3 className="text-2xl font-heading font-bold text-white">Nityam Wellness</h3>
-                  <p className="text-sm opacity-80">Ancient Wisdom • Modern Healing</p>
+      {/* Beautiful Footer with Keywords */}
+      <footer className="bg-gradient-to-br from-earth via-earth-dark to-earth-light relative overflow-hidden">
+        {/* Floating elements */}
+        <div className="absolute top-0 right-0 text-primary/10 animate-float">
+          <Flower2 className="h-32 w-32" />
+        </div>
+        <div className="absolute bottom-0 left-0 text-gold/10 animate-float" style={{ animationDelay: '3s' }}>
+          <Sun className="h-28 w-28" />
+        </div>
+        
+        <div className="relative z-10 py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-5 gap-12 mb-16">
+              {/* Brand Section */}
+              <div className="md:col-span-2">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="relative">
+                    <Leaf className="h-12 w-12 text-primary animate-float" />
+                    <div className="absolute inset-0 h-12 w-12 text-primary/30 animate-pulse">
+                      <Leaf className="h-12 w-12" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-heading font-bold text-white mb-1">Nityam Wellness</h3>
+                    <p className="text-sm text-primary font-accent">Ancient Wisdom • Modern Healing</p>
+                  </div>
+                </div>
+                <p className="text-earth-light/90 mb-8 leading-relaxed text-lg">
+                  Experience authentic Ayurvedic healing in the sacred heart of Rishikesh. Our holistic approach 
+                  combines traditional therapies with modern wellness practices for complete transformation.
+                </p>
+                
+                {/* Contact Info */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3 text-earth-light">
+                    <Phone className="h-5 w-5 text-primary" />
+                    <span className="font-medium">+91 98765 43210</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-earth-light">
+                    <Mail className="h-5 w-5 text-primary" />
+                    <span className="font-medium">info@nityamwellness.com</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-earth-light">
+                    <MapPin className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Rishikesh, Uttarakhand, India</span>
+                  </div>
+                </div>
+                
+                {/* Social Media */}
+                <div className="flex gap-4">
+                  <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-primary hover:bg-primary/10 transition-all">
+                    <Users className="h-5 w-5" />
+                  </Button>
+                  <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-primary hover:bg-primary/10 transition-all">
+                    <Mail className="h-5 w-5" />
+                  </Button>
+                  <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-primary hover:bg-primary/10 transition-all">
+                    <Phone className="h-5 w-5" />
+                  </Button>
+                  <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-primary hover:bg-primary/10 transition-all">
+                    <MapPin className="h-5 w-5" />
+                  </Button>
                 </div>
               </div>
-              <p className="text-earth-light/80 mb-6 leading-relaxed max-w-md">
-                Ancient Ayurvedic wisdom meets modern wellness in the heart of Rishikesh. 
-                Transform your life with authentic healing experiences.
-              </p>
-              <div className="flex gap-4">
-                <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-white">
-                  <Users className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-white">
-                  <Mail className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-earth-light/60 hover:text-white">
-                  <Phone className="h-5 w-5" />
-                </Button>
+              
+              {/* Quick Links */}
+              <div>
+                <h4 className="font-heading font-bold mb-6 text-white text-xl flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-primary" />
+                  Quick Links
+                </h4>
+                <ul className="space-y-4 text-earth-light/80">
+                  <li><a href="/about" className="hover:text-primary transition-colors hover:pl-2 transition-all duration-300">About Us</a></li>
+                  <li><a href="/services" className="hover:text-primary transition-colors hover:pl-2 transition-all duration-300">Our Services</a></li>
+                  <li><a href="/packages" className="hover:text-primary transition-colors hover:pl-2 transition-all duration-300">Wellness Packages</a></li>
+                  <li><a href="/booking" className="hover:text-primary transition-colors hover:pl-2 transition-all duration-300">Book Appointment</a></li>
+                  <li><a href="/contact" className="hover:text-primary transition-colors hover:pl-2 transition-all duration-300">Contact Us</a></li>
+                  <li><a href="/blog" className="hover:text-primary transition-colors hover:pl-2 transition-all duration-300">Wellness Blog</a></li>
+                </ul>
+              </div>
+              
+              {/* Treatments */}
+              <div>
+                <h4 className="font-heading font-bold mb-6 text-white text-xl flex items-center gap-2">
+                  <Heart className="h-5 w-5 text-primary" />
+                  Treatments
+                </h4>
+                <ul className="space-y-4 text-earth-light/80">
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Panchakarma Detox</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Abhyanga Massage</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Shirodhara Therapy</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Sound Healing</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Yoga & Meditation</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Herbal Medicine</li>
+                </ul>
+              </div>
+              
+              {/* Wellness Keywords */}
+              <div>
+                <h4 className="font-heading font-bold mb-6 text-white text-xl flex items-center gap-2">
+                  <Mountain className="h-5 w-5 text-primary" />
+                  Wellness
+                </h4>
+                <ul className="space-y-4 text-earth-light/80">
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Holistic Healing</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Mind-Body Balance</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Spiritual Wellness</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Natural Therapies</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Stress Relief</li>
+                  <li className="hover:text-primary transition-colors cursor-pointer hover:pl-2 transition-all duration-300">Life Transformation</li>
+                </ul>
               </div>
             </div>
             
-            <div>
-              <h4 className="font-heading font-semibold mb-6 text-white text-lg">Quick Links</h4>
-              <ul className="space-y-3 text-earth-light/80">
-                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
-                <li><a href="/packages" className="hover:text-white transition-colors">Packages</a></li>
-                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
+            {/* Keywords Section */}
+            <div className="bg-earth-dark/50 rounded-3xl p-8 mb-12 border border-primary/10">
+              <h4 className="font-heading font-bold text-white text-xl mb-6 text-center">
+                Experience Authentic Ayurvedic Wellness in Rishikesh
+              </h4>
+              <div className="flex flex-wrap gap-3 justify-center">
+                {[
+                  'Ayurveda Rishikesh', 'Panchakarma Detox', 'Yoga Retreat', 'Meditation Center',
+                  'Holistic Healing', 'Sound Therapy', 'Abhyanga Massage', 'Shirodhara Treatment',
+                  'Wellness Packages', 'Spiritual Healing', 'Natural Medicine', 'Stress Relief',
+                  'Mind-Body Balance', 'Life Transformation', 'Ancient Wisdom', 'Modern Wellness',
+                  'Himalayan Retreat', 'Sacred Healing', 'Authentic Ayurveda', 'Wellness Journey'
+                ].map((keyword, index) => (
+                  <span key={index} className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/20 transition-colors cursor-pointer">
+                    {keyword}
+                  </span>
+                ))}
+              </div>
             </div>
             
-            <div>
-              <h4 className="font-heading font-semibold mb-6 text-white text-lg">Services</h4>
-              <ul className="space-y-3 text-earth-light/80">
-                <li className="hover:text-white transition-colors cursor-pointer">Panchakarma</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Abhyanga Massage</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Shirodhara</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Yoga & Meditation</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-earth-light/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-earth-light/60 text-sm">
-              &copy; 2024 Nityam Wellness. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm text-earth-light/60 mt-4 md:mt-0">
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+            {/* Bottom Section */}
+            <div className="border-t border-earth-light/20 pt-8">
+              <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+                <div className="text-center lg:text-left">
+                  <p className="text-earth-light/80 text-sm mb-2">
+                    &copy; 2024 Nityam Wellness Center, Rishikesh. All rights reserved.
+                  </p>
+                  <p className="text-earth-light/60 text-xs">
+                    Authentic Ayurvedic treatments | Licensed practitioners | Traditional healing methods
+                  </p>
+                </div>
+                
+                <div className="flex flex-wrap gap-6 text-sm text-earth-light/60">
+                  <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+                  <a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a>
+                  <a href="/disclaimer" className="hover:text-primary transition-colors">Medical Disclaimer</a>
+                  <a href="/booking-policy" className="hover:text-primary transition-colors">Booking Policy</a>
+                </div>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap justify-center gap-8 mt-8 pt-6 border-t border-earth-light/10">
+                <div className="flex items-center gap-2 text-earth-light/60">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs">Licensed Ayurvedic Center</span>
+                </div>
+                <div className="flex items-center gap-2 text-earth-light/60">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs">Certified Practitioners</span>
+                </div>
+                <div className="flex items-center gap-2 text-earth-light/60">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs">Traditional Methods</span>
+                </div>
+                <div className="flex items-center gap-2 text-earth-light/60">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-xs">5000+ Years of Wisdom</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
