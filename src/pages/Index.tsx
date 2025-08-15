@@ -6,19 +6,19 @@ const Index = () => {
 
   const heroSlides = [
     {
-      title: "Ancient Sound Healing in Sacred Rishikesh",
-      subtitle: "Transform Your Life Through Sacred Vibrations",
-      description: "Experience the profound healing power of traditional sound therapy in the spiritual heart of India."
+      title: "Nityam Wellness",
+      subtitle: "Sacred Journey to Inner Peace",
+      description: "Discover ancient healing wisdom through authentic Ayurvedic treatments and sound therapy in the serene landscapes of Rishikesh."
     },
     {
-      title: "Authentic Ayurvedic Treatments",
-      subtitle: "5000 Years of Healing Wisdom",
-      description: "Discover personalized treatments that restore balance to your mind, body, and spirit."
+      title: "Holistic Healing Experience",
+      subtitle: "Mind • Body • Spirit Harmony",
+      description: "Transform your well-being through time-tested practices that nurture your complete self with gentle, natural healing."
     },
     {
-      title: "Sacred Sound Instruments & Healing",
-      subtitle: "Premium Quality Meditation Tools",
-      description: "Handcrafted instruments that carry the vibrations of ancient healing traditions."
+      title: "Sacred Sound & Wellness",
+      subtitle: "Vibrational Medicine for Modern Life",
+      description: "Experience the profound healing power of ancient sound instruments designed to restore balance and inner tranquility."
     }
   ];
 
@@ -113,10 +113,14 @@ const Index = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ background: 'rgba(139, 69, 19, 0.95)' }}>
+      <nav className="navbar navbar-expand-lg fixed-top" style={{ 
+        background: 'rgba(255, 255, 255, 0.95)', 
+        backdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(232, 244, 253, 0.3)'
+      }}>
         <div className="container">
-          <a className="navbar-brand font-heading fw-bold fs-3" href="#">
-            <span className="glow">🕉️ Rishikesh Healing</span>
+          <a className="navbar-brand font-heading fw-bold fs-3" href="#" style={{ color: '#2C3E50' }}>
+            <span className="glow">🧘‍♀️ Nityam Wellness</span>
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
@@ -124,19 +128,19 @@ const Index = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#home">Home</a>
+                <a className="nav-link fw-medium" href="#home" style={{ color: '#2C3E50' }}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#products">Products</a>
+                <a className="nav-link fw-medium" href="#products" style={{ color: '#2C3E50' }}>Sacred Tools</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#services">Services</a>
+                <a className="nav-link fw-medium" href="#healing" style={{ color: '#2C3E50' }}>Sound Healing</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#testimonials">Reviews</a>
+                <a className="nav-link fw-medium" href="#services" style={{ color: '#2C3E50' }}>Wellness</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <a className="nav-link fw-medium" href="#testimonials" style={{ color: '#2C3E50' }}>Stories</a>
               </li>
             </ul>
           </div>
@@ -147,24 +151,56 @@ const Index = () => {
       <section id="home" className="hero-section">
         <div className="container">
           <div className="row align-items-center min-vh-100">
-            <div className="col-lg-8 mx-auto text-center">
-              <div className="hero-content text-white">
-                <h1 className="display-3 font-heading fw-bold mb-4 floating">
+            <div className="col-lg-10 mx-auto text-center">
+              <div className="hero-content">
+                <h1 className="display-2 font-heading fw-bold mb-4 floating" style={{ 
+                  color: '#2C3E50',
+                  fontSize: '4.5rem',
+                  lineHeight: '1.1'
+                }}>
                   {heroSlides[currentSlide].title}
                 </h1>
-                <h2 className="fs-2 font-accent mb-4 text-warning glow">
+                <h2 className="fs-1 font-accent mb-4 glow" style={{ 
+                  color: '#2C3E50',
+                  fontSize: '2.5rem',
+                  fontWeight: '300'
+                }}>
                   {heroSlides[currentSlide].subtitle}
                 </h2>
-                <p className="fs-5 mb-5 opacity-90">
+                <p className="fs-4 mb-5" style={{ 
+                  color: '#2C3E50',
+                  opacity: '0.8',
+                  maxWidth: '600px',
+                  margin: '0 auto 3rem',
+                  lineHeight: '1.6'
+                }}>
                   {heroSlides[currentSlide].description}
                 </p>
-                <div className="d-flex gap-3 justify-content-center flex-wrap">
+                <div className="d-flex gap-4 justify-content-center flex-wrap">
                   <a href="#products" className="btn btn-primary btn-lg">
-                    🛒 Shop Sacred Instruments
+                    <span>✨ Explore Sacred Tools</span>
                   </a>
-                  <a href="#services" className="btn btn-outline-light btn-lg">
-                    🧘‍♀️ Healing Services
+                  <a href="#healing" className="btn btn-outline-primary btn-lg">
+                    <span>🎵 Sound Healing</span>
                   </a>
+                </div>
+                
+                {/* Slide Indicators */}
+                <div className="d-flex justify-content-center mt-5 gap-2">
+                  {heroSlides.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`rounded-circle ${index === currentSlide ? 'bg-primary' : 'bg-light'}`}
+                      style={{ 
+                        width: '12px', 
+                        height: '12px',
+                        opacity: index === currentSlide ? '1' : '0.4',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer'
+                      }}
+                      onClick={() => setCurrentSlide(index)}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -173,50 +209,71 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-5" style={{ background: 'rgba(245, 245, 220, 0.9)' }}>
+      <section id="products" className="py-5" style={{ 
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(232, 244, 253, 0.3) 100%)',
+        position: 'relative'
+      }}>
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold text-primary mb-3">
-                🎵 Sacred Sound Healing Instruments
+              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#2C3E50' }}>
+                ✨ Sacred Wellness Tools
               </h2>
-              <p className="fs-5 text-muted">
-                Handcrafted authentic instruments for meditation, healing, and spiritual practice
+              <p className="fs-5 mb-4" style={{ color: '#2C3E50', opacity: '0.7', maxWidth: '600px', margin: '0 auto' }}>
+                Handcrafted instruments that carry the ancient wisdom of sound healing and meditation practice
               </p>
+              <div style={{ 
+                width: '100px', 
+                height: '3px', 
+                background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                margin: '2rem auto',
+                borderRadius: '2px'
+              }}></div>
             </div>
           </div>
           
           <div className="row g-4">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <div key={product.id} className="col-lg-3 col-md-6">
-                <div className="card product-card h-100">
+                <div className="card product-card h-100" style={{ 
+                  animationDelay: `${index * 0.1}s`,
+                  animation: 'fadeInUp 0.8s ease-out both'
+                }}>
                   <div className="position-relative">
                     <img 
                       src={product.image} 
                       alt={product.name}
                       className="product-image"
+                      style={{ position: 'relative', zIndex: '2' }}
                     />
-                    <div className="position-absolute top-0 end-0 m-3">
-                      <span className="badge bg-success">Authentic</span>
+                    <div className="position-absolute top-0 end-0 m-3" style={{ zIndex: '3' }}>
+                      <span className="badge" style={{ 
+                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                        color: '#2C3E50',
+                        borderRadius: '20px',
+                        padding: '8px 12px'
+                      }}>✨ Authentic</span>
                     </div>
                   </div>
-                  <div className="card-body d-flex flex-column">
-                    <h5 className="card-title font-heading fw-bold">{product.name}</h5>
-                    <p className="card-text text-muted flex-grow-1">{product.description}</p>
-                    <div className="mb-2">
-                      {renderStars(product.rating)}
-                      <small className="text-muted ms-2">({product.rating}/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <div>
-                        <span className="price-tag">{product.price}</span>
-                        <small className="text-muted text-decoration-line-through ms-2">
-                          {product.originalPrice}
-                        </small>
+                  <div className="card-body d-flex flex-column" style={{ position: 'relative', zIndex: '2' }}>
+                    <h5 className="card-title font-heading fw-bold" style={{ color: '#2C3E50' }}>{product.name}</h5>
+                    <p className="card-text flex-grow-1" style={{ color: '#2C3E50', opacity: '0.7' }}>{product.description}</p>
+                    <div className="mb-3">
+                      <div className="d-flex align-items-center mb-2">
+                        {renderStars(product.rating)}
+                        <small className="ms-2" style={{ color: '#2C3E50', opacity: '0.6' }}>({product.rating}/5)</small>
+                      </div>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <span className="fw-bold fs-5" style={{ color: '#2C3E50' }}>{product.price}</span>
+                          <small className="text-decoration-line-through ms-2" style={{ opacity: '0.5' }}>
+                            {product.originalPrice}
+                          </small>
+                        </div>
                       </div>
                     </div>
                     <button className="btn btn-primary w-100">
-                      🛒 Add to Cart
+                      <span>✨ Add to Collection</span>
                     </button>
                   </div>
                 </div>
@@ -227,54 +284,147 @@ const Index = () => {
       </section>
 
       {/* Sound Healing Feature Section */}
-      <section className="py-5" style={{ background: 'linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(210, 105, 30, 0.1))' }}>
+      <section id="healing" className="py-5" style={{ 
+        background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.4) 0%, rgba(255, 248, 220, 0.3) 50%, rgba(209, 236, 241, 0.4) 100%)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        {/* Background Elements */}
+        <div style={{
+          position: 'absolute',
+          top: '10%',
+          left: '5%',
+          width: '200px',
+          height: '200px',
+          background: 'radial-gradient(circle, rgba(232, 244, 253, 0.3) 0%, transparent 70%)',
+          borderRadius: '50%',
+          animation: 'float 8s ease-in-out infinite'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          bottom: '15%',
+          right: '10%',
+          width: '150px',
+          height: '150px',
+          background: 'radial-gradient(circle, rgba(209, 236, 241, 0.3) 0%, transparent 70%)',
+          borderRadius: '50%',
+          animation: 'float 6s ease-in-out infinite reverse'
+        }}></div>
+
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
-              <img 
-                src="/src/assets/sound-healing.jpg" 
-                alt="Sound Healing Session"
-                className="img-fluid rounded-4 shadow-lg"
-              />
-            </div>
-            <div className="col-lg-6">
-              <div className="ps-lg-5">
-                <h2 className="display-5 font-heading fw-bold text-primary mb-4">
-                  🎶 Transformative Sound Healing
-                </h2>
-                <p className="fs-5 mb-4">
-                  Experience the profound healing power of sacred sound vibrations. Our authentic instruments 
-                  create resonances that restore harmony to your energy centers and promote deep relaxation.
-                </p>
-                <div className="row g-3 mb-4">
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <span className="fs-3 me-3">🧘‍♀️</span>
-                      <span>Deep Meditation</span>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <span className="fs-3 me-3">💆‍♀️</span>
-                      <span>Stress Relief</span>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <span className="fs-3 me-3">⚡</span>
-                      <span>Energy Healing</span>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <span className="fs-3 me-3">🌟</span>
-                      <span>Chakra Balancing</span>
+            <div className="col-lg-6 fade-in-left">
+              <div className="position-relative">
+                <img 
+                  src="/src/assets/sound-healing.jpg" 
+                  alt="Sound Healing Session"
+                  className="img-fluid shadow-lg"
+                  style={{ 
+                    borderRadius: '30px',
+                    transform: 'perspective(1000px) rotateY(-5deg)',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '20px',
+                  left: '20px',
+                  background: 'rgba(255, 255, 255, 0.9)',
+                  borderRadius: '20px',
+                  padding: '15px 20px',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  <div className="d-flex align-items-center">
+                    <span style={{ fontSize: '1.5rem', marginRight: '10px' }}>🎵</span>
+                    <div>
+                      <div style={{ fontWeight: '600', color: '#2C3E50', fontSize: '0.9rem' }}>Sacred Vibrations</div>
+                      <div style={{ color: '#2C3E50', opacity: '0.7', fontSize: '0.8rem' }}>Healing Frequencies</div>
                     </div>
                   </div>
                 </div>
-                <a href="#services" className="btn btn-primary btn-lg">
-                  Book Sound Healing Session
-                </a>
+              </div>
+            </div>
+            <div className="col-lg-6 fade-in-right">
+              <div className="ps-lg-5">
+                <h2 className="display-4 font-heading fw-bold mb-4" style={{ color: '#2C3E50' }}>
+                  🎶 Sacred Sound Healing Journey
+                </h2>
+                <p className="fs-5 mb-4" style={{ color: '#2C3E50', opacity: '0.8', lineHeight: '1.6' }}>
+                  Immerse yourself in the profound healing power of ancient sound vibrations. Our carefully crafted 
+                  instruments create therapeutic resonances that gently restore harmony to your mind, body, and spirit.
+                </p>
+                
+                <div className="row g-4 mb-5">
+                  <div className="col-6">
+                    <div className="d-flex align-items-start">
+                      <div style={{ 
+                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                        borderRadius: '15px',
+                        padding: '15px',
+                        marginRight: '15px',
+                        fontSize: '1.5rem'
+                      }}>🧘‍♀️</div>
+                      <div>
+                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Deep Meditation</h6>
+                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Inner stillness</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="d-flex align-items-start">
+                      <div style={{ 
+                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                        borderRadius: '15px',
+                        padding: '15px',
+                        marginRight: '15px',
+                        fontSize: '1.5rem'
+                      }}>💆‍♀️</div>
+                      <div>
+                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Stress Relief</h6>
+                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Complete relaxation</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="d-flex align-items-start">
+                      <div style={{ 
+                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                        borderRadius: '15px',
+                        padding: '15px',
+                        marginRight: '15px',
+                        fontSize: '1.5rem'
+                      }}>⚡</div>
+                      <div>
+                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Energy Healing</h6>
+                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Vitality restoration</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="d-flex align-items-start">
+                      <div style={{ 
+                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                        borderRadius: '15px',
+                        padding: '15px',
+                        marginRight: '15px',
+                        fontSize: '1.5rem'
+                      }}>🌟</div>
+                      <div>
+                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Chakra Balance</h6>
+                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Energy alignment</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="d-flex gap-3 flex-wrap">
+                  <a href="#services" className="btn btn-primary btn-lg">
+                    <span>🎵 Book Sound Session</span>
+                  </a>
+                  <a href="#products" className="btn btn-outline-primary">
+                    <span>✨ Explore Instruments</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

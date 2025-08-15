@@ -3,23 +3,27 @@
 /* Bootstrap Import */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* Custom CSS Variables */
+/* Custom CSS Variables - Light Theme */
 :root {
-  --primary-color: #8B4513;
-  --secondary-color: #D2691E;
-  --accent-color: #CD853F;
-  --dark-color: #5D4037;
-  --light-color: #F5F5DC;
-  --gold-color: #FFD700;
-  --sage-color: #9CAF88;
+  --primary-color: #E8F4FD;
+  --secondary-color: #D1ECF1;
+  --accent-color: #FFF8DC;
+  --dark-color: #2C3E50;
+  --light-color: #FEFEFE;
+  --gold-color: #F9E79F;
+  --sage-color: #E8F5E8;
+  --soft-blue: #E3F2FD;
+  --soft-pink: #FCE4EC;
+  --soft-lavender: #F3E5F5;
 }
 
 /* Global Styles */
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: linear-gradient(135deg, #8B4513, #D2691E, #CD853F);
+  background: linear-gradient(135deg, #FEFEFE 0%, #E8F4FD 30%, #D1ECF1 60%, #FFF8DC 100%);
   background-attachment: fixed;
-  color: #333;
+  color: #2C3E50;
+  overflow-x: hidden;
 }
 
 .font-heading {
@@ -32,37 +36,65 @@ body {
 
 /* Custom Bootstrap Overrides */
 .btn-primary {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  border: none;
-  border-radius: 25px;
-  padding: 12px 30px;
+  background: linear-gradient(135deg, #E8F4FD 0%, #D1ECF1 100%);
+  border: 2px solid #E8F4FD;
+  border-radius: 50px;
+  padding: 14px 35px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  color: #2C3E50;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #D1ECF1 0%, #E8F4FD 100%);
+  transition: left 0.4s ease;
+  z-index: 1;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(232, 244, 253, 0.4);
+  color: #2C3E50;
+}
+
+.btn-primary:hover::before {
+  left: 0;
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 2;
 }
 
 .btn-outline-primary {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  border-radius: 25px;
-  padding: 12px 30px;
+  border: 2px solid #E8F4FD;
+  color: #2C3E50;
+  border-radius: 50px;
+  padding: 14px 35px;
   font-weight: 600;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .btn-outline-primary:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
+  background: #E8F4FD;
+  border-color: #D1ECF1;
+  color: #2C3E50;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(232, 244, 253, 0.3);
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(210, 105, 30, 0.8)), url('/src/assets/rishikesh-hero.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(232, 244, 253, 0.9) 50%, rgba(209, 236, 241, 0.95) 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -72,10 +104,11 @@ body {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  animation: fadeInUp 1.2s ease-out;
 }
 
-/* Animated Background */
+/* Floating Particles */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -83,35 +116,87 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, 
-    rgba(139, 69, 19, 0.1), 
-    rgba(210, 105, 30, 0.1), 
-    rgba(205, 133, 63, 0.1), 
-    rgba(255, 215, 0, 0.1)
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(232, 244, 253, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(209, 236, 241, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 248, 220, 0.3) 0%, transparent 50%);
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Background Pattern */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(232, 244, 253, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+  animation: shimmer 20s linear infinite;
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(60px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.8; 
+  }
+  50% { 
+    transform: scale(1.05); 
+    opacity: 1; 
+  }
 }
 
 /* Product Cards */
 .product-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 25px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  border: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(232, 244, 253, 0.5);
+  box-shadow: 0 8px 30px rgba(232, 244, 253, 0.4);
+  position: relative;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(232, 244, 253, 0.1) 0%, rgba(209, 236, 241, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(139, 69, 19, 0.2);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(232, 244, 253, 0.6);
+}
+
+.product-card:hover::before {
+  opacity: 1;
 }
 
 .product-image {
@@ -162,24 +247,75 @@ body {
   padding: 3rem 0 1rem;
 }
 
-/* Floating Animation */
+/* Enhanced Animations */
 .floating {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-15px) rotate(1deg); 
+  }
+  50% { 
+    transform: translateY(-25px) rotate(0deg); 
+  }
+  75% { 
+    transform: translateY(-10px) rotate(-1deg); 
+  }
 }
 
-/* Glow Effect */
+/* Subtle Glow Effect */
 .glow {
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: softGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.8); }
-  100% { text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 1); }
+@keyframes softGlow {
+  0% { 
+    text-shadow: 0 0 10px rgba(232, 244, 253, 0.6); 
+    color: #2C3E50;
+  }
+  100% { 
+    text-shadow: 0 0 20px rgba(209, 236, 241, 0.8), 0 0 30px rgba(232, 244, 253, 0.6); 
+    color: #2C3E50;
+  }
+}
+
+/* Fade In Animations */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Custom Scrollbar */
