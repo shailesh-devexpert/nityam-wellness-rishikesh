@@ -119,28 +119,28 @@ const Index = () => {
         borderBottom: '1px solid rgba(232, 244, 253, 0.3)'
       }}>
         <div className="container">
-          <a className="navbar-brand font-heading fw-bold fs-3" href="#" style={{ color: '#2C3E50' }}>
+          <a className="navbar-brand font-heading fw-bold fs-3" href="#" style={{ color: '#1A2B42' }}>
             <span className="glow">🧘‍♀️ Nityam Wellness</span>
           </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style={{ borderColor: '#E8EDF5' }}>
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#home" style={{ color: '#2C3E50' }}>Home</a>
+                <a className="nav-link fw-medium" href="#home" style={{ color: '#1A2B42' }}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#products" style={{ color: '#2C3E50' }}>Sacred Tools</a>
+                <a className="nav-link fw-medium" href="#products" style={{ color: '#1A2B42' }}>Sacred Tools</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#healing" style={{ color: '#2C3E50' }}>Sound Healing</a>
+                <a className="nav-link fw-medium" href="#healing" style={{ color: '#1A2B42' }}>Sound Healing</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#services" style={{ color: '#2C3E50' }}>Wellness</a>
+                <a className="nav-link fw-medium" href="#services" style={{ color: '#1A2B42' }}>Wellness</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#testimonials" style={{ color: '#2C3E50' }}>Stories</a>
+                <a className="nav-link fw-medium" href="#testimonials" style={{ color: '#1A2B42' }}>Stories</a>
               </li>
             </ul>
           </div>
@@ -154,22 +154,23 @@ const Index = () => {
             <div className="col-lg-10 mx-auto text-center">
               <div className="hero-content">
                 <h1 className="display-2 font-heading fw-bold mb-4 floating" style={{ 
-                  color: '#2C3E50',
+                  color: '#1A2B42',
                   fontSize: '4.5rem',
                   lineHeight: '1.1'
                 }}>
                   {heroSlides[currentSlide].title}
                 </h1>
                 <h2 className="fs-1 font-accent mb-4 glow" style={{ 
-                  color: '#2C3E50',
+                  color: '#1A2B42',
                   fontSize: '2.5rem',
-                  fontWeight: '300'
+                  fontWeight: '300',
+                  opacity: '0.8'
                 }}>
                   {heroSlides[currentSlide].subtitle}
                 </h2>
                 <p className="fs-4 mb-5" style={{ 
-                  color: '#2C3E50',
-                  opacity: '0.8',
+                  color: '#1A2B42',
+                  opacity: '0.7',
                   maxWidth: '600px',
                   margin: '0 auto 3rem',
                   lineHeight: '1.6'
@@ -194,9 +195,11 @@ const Index = () => {
                       style={{ 
                         width: '12px', 
                         height: '12px',
-                        opacity: index === currentSlide ? '1' : '0.4',
+                        opacity: index === currentSlide ? '1' : '0.3',
+                        backgroundColor: index === currentSlide ? '#F8FBFF' : '#E8EDF5',
                         transition: 'all 0.3s ease',
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        border: '1px solid #E8EDF5'
                       }}
                       onClick={() => setCurrentSlide(index)}
                     />
@@ -216,16 +219,16 @@ const Index = () => {
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#2C3E50' }}>
+              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#1A2B42' }}>
                 ✨ Sacred Wellness Tools
               </h2>
-              <p className="fs-5 mb-4" style={{ color: '#2C3E50', opacity: '0.7', maxWidth: '600px', margin: '0 auto' }}>
+              <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.6', maxWidth: '600px', margin: '0 auto' }}>
                 Handcrafted instruments that carry the ancient wisdom of sound healing and meditation practice
               </p>
               <div style={{ 
                 width: '100px', 
-                height: '3px', 
-                background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                height: '2px', 
+                background: 'linear-gradient(135deg, #F8FBFF, #F0F7FF)',
                 margin: '2rem auto',
                 borderRadius: '2px'
               }}></div>
@@ -248,25 +251,28 @@ const Index = () => {
                     />
                     <div className="position-absolute top-0 end-0 m-3" style={{ zIndex: '3' }}>
                       <span className="badge" style={{ 
-                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                        color: '#2C3E50',
-                        borderRadius: '20px',
-                        padding: '8px 12px'
+                        background: 'rgba(255, 255, 255, 0.9)',
+                        color: '#1A2B42',
+                        borderRadius: '15px',
+                        padding: '6px 12px',
+                        fontSize: '0.75rem',
+                        border: '1px solid #E8EDF5',
+                        backdropFilter: 'blur(10px)'
                       }}>✨ Authentic</span>
                     </div>
                   </div>
                   <div className="card-body d-flex flex-column" style={{ position: 'relative', zIndex: '2' }}>
-                    <h5 className="card-title font-heading fw-bold" style={{ color: '#2C3E50' }}>{product.name}</h5>
-                    <p className="card-text flex-grow-1" style={{ color: '#2C3E50', opacity: '0.7' }}>{product.description}</p>
+                    <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>{product.name}</h5>
+                    <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>{product.description}</p>
                     <div className="mb-3">
                       <div className="d-flex align-items-center mb-2">
                         {renderStars(product.rating)}
-                        <small className="ms-2" style={{ color: '#2C3E50', opacity: '0.6' }}>({product.rating}/5)</small>
+                        <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>({product.rating}/5)</small>
                       </div>
                       <div className="d-flex justify-content-between align-items-center">
                         <div>
-                          <span className="fw-bold fs-5" style={{ color: '#2C3E50' }}>{product.price}</span>
-                          <small className="text-decoration-line-through ms-2" style={{ opacity: '0.5' }}>
+                          <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>{product.price}</span>
+                          <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>
                             {product.originalPrice}
                           </small>
                         </div>
