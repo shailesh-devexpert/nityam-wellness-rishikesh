@@ -148,7 +148,12 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section">
+      <section id="home" className="hero-section" style={{
+        backgroundImage: `linear-gradient(135deg, rgba(232, 244, 253, 0.8) 0%, rgba(255, 248, 220, 0.6) 50%, rgba(209, 236, 241, 0.8) 100%), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E8F4FD' fill-opacity='0.15'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3Ccircle cx='80' cy='30' r='4'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='40' cy='60' r='3'/%3E%3Ccircle cx='70' cy='70' r='2'/%3E%3Ccircle cx='30' cy='80' r='3'/%3E%3Ccircle cx='90' cy='90' r='2'/%3E%3Cpath d='M15 45 Q25 35 35 45 T55 45' stroke='%23D1ECF1' stroke-width='2' fill='none' stroke-opacity='0.3'/%3E%3Cpath d='M65 25 Q75 15 85 25 T105 25' stroke='%23E8F4FD' stroke-width='1.5' fill='none' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
+        backgroundSize: 'cover, 120px 120px',
+        backgroundPosition: 'center, 0 0',
+        backgroundRepeat: 'no-repeat, repeat'
+      }}>
         <div className="container">
           <div className="row align-items-center min-vh-100">
             <div className="col-lg-10 mx-auto text-center">
@@ -181,7 +186,7 @@ const Index = () => {
                   <a href="#products" className="btn btn-primary btn-lg">
                     <span>✨ Explore Sacred Tools</span>
                   </a>
-                  <a href="#healing" className="btn btn-outline-primary btn-lg">
+                  <a href="/healing-services" className="btn btn-outline-primary btn-lg">
                     <span>🎵 Sound Healing</span>
                   </a>
                 </div>
@@ -424,7 +429,7 @@ const Index = () => {
                 </div>
                 
                 <div className="d-flex gap-3 flex-wrap">
-                  <a href="#services" className="btn btn-primary btn-lg">
+                  <a href="/healing-services" className="btn btn-primary btn-lg">
                     <span>🎵 Book Sound Session</span>
                   </a>
                   <a href="#products" className="btn btn-outline-primary">
@@ -460,7 +465,7 @@ const Index = () => {
                 <h4 className="font-heading fw-bold text-primary mb-3">🌿 Panchakarma Detox</h4>
                 <p className="mb-4">Complete Ayurvedic detoxification and rejuvenation program for mind, body, and spirit.</p>
                 <div className="price-tag mb-3">From ₹15,000</div>
-                <button className="btn btn-outline-primary">Learn More</button>
+                <a href="/healing-services" className="btn btn-outline-primary">Learn More</a>
               </div>
             </div>
             
@@ -472,7 +477,7 @@ const Index = () => {
                 <h4 className="font-heading fw-bold text-primary mb-3">💆‍♀️ Abhyanga Massage</h4>
                 <p className="mb-4">Traditional full-body oil massage using warm herbal oils for deep relaxation.</p>
                 <div className="price-tag mb-3">From ₹3,500</div>
-                <button className="btn btn-outline-primary">Learn More</button>
+                <a href="/healing-services" className="btn btn-outline-primary">Learn More</a>
               </div>
             </div>
             
@@ -484,7 +489,7 @@ const Index = () => {
                 <h4 className="font-heading fw-bold text-primary mb-3">🧘‍♀️ Shirodhara Therapy</h4>
                 <p className="mb-4">Continuous pouring of warm oil on the forehead for mental clarity and peace.</p>
                 <div className="price-tag mb-3">From ₹4,500</div>
-                <button className="btn btn-outline-primary">Learn More</button>
+                <a href="/healing-services" className="btn btn-outline-primary">Learn More</a>
               </div>
             </div>
           </div>
