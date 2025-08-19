@@ -116,31 +116,36 @@ const Index = () => {
       <nav className="navbar navbar-expand-lg fixed-top" style={{ 
         background: 'rgba(255, 255, 255, 0.95)', 
         backdropFilter: 'blur(20px)',
-        borderBottom: '1px solid rgba(232, 244, 253, 0.3)'
+        borderBottom: '1px solid rgba(102, 126, 234, 0.2)'
       }}>
         <div className="container">
-          <a className="navbar-brand font-heading fw-bold fs-3" href="#" style={{ color: '#1A2B42' }}>
+          <a className="navbar-brand font-heading fw-bold fs-3" href="#" style={{ 
+            background: 'var(--gradient-primary)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>
             <span className="glow">🧘‍♀️ Nityam Wellness</span>
           </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style={{ borderColor: '#E8EDF5' }}>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#home" style={{ color: '#1A2B42' }}>Home</a>
+                <a className="nav-link fw-medium" href="#home" style={{ color: 'var(--primary-text)' }}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#products" style={{ color: '#1A2B42' }}>Sacred Tools</a>
+                <a className="nav-link fw-medium" href="#products" style={{ color: 'var(--primary-text)' }}>Sacred Tools</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#healing" style={{ color: '#1A2B42' }}>Sound Healing</a>
+                <a className="nav-link fw-medium" href="#healing" style={{ color: 'var(--primary-text)' }}>Sound Healing</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#services" style={{ color: '#1A2B42' }}>Wellness</a>
+                <a className="nav-link fw-medium" href="/about" style={{ color: 'var(--primary-text)' }}>About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-medium" href="#testimonials" style={{ color: '#1A2B42' }}>Stories</a>
+                <a className="nav-link fw-medium" href="#faq" style={{ color: 'var(--primary-text)' }}>FAQ</a>
               </li>
             </ul>
           </div>
@@ -568,77 +573,312 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
+      {/* FAQ Section */}
+      <section id="faq" className="py-5" style={{ 
+        background: 'var(--gradient-overlay)',
+        position: 'relative'
+      }}>
         <div className="container">
+          <div className="row">
+            <div className="col-12 text-center mb-5">
+              <h2 className="display-4 font-heading fw-bold mb-3" style={{
+                background: 'var(--gradient-primary)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                ❓ Frequently Asked Questions
+              </h2>
+              <p className="fs-5" style={{ color: 'var(--secondary-text)', maxWidth: '600px', margin: '0 auto' }}>
+                Everything you need to know about our healing services and sacred instruments
+              </p>
+            </div>
+          </div>
+          
+          <div className="row">
+            <div className="col-lg-8 mx-auto">
+              <div className="accordion" id="faqAccordion">
+                <div className="accordion-item mb-3" style={{ 
+                  background: 'var(--gradient-card)',
+                  border: 'none',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  boxShadow: 'var(--shadow-gradient)'
+                }}>
+                  <h2 className="accordion-header">
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style={{
+                      background: 'transparent',
+                      border: 'none',
+                      fontWeight: '600',
+                      color: 'var(--primary-text)'
+                    }}>
+                      🎵 What is sound healing and how does it work?
+                    </button>
+                  </h2>
+                  <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
+                      Sound healing uses vibrational frequencies from singing bowls, chimes, and other sacred instruments to 
+                      restore balance to your body's energy systems. The therapeutic vibrations help reduce stress, promote 
+                      deep relaxation, and facilitate emotional healing through resonance with your chakras.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="accordion-item mb-3" style={{ 
+                  background: 'var(--gradient-card)',
+                  border: 'none',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  boxShadow: 'var(--shadow-gradient)'
+                }}>
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style={{
+                      background: 'transparent',
+                      border: 'none',
+                      fontWeight: '600',
+                      color: 'var(--primary-text)'
+                    }}>
+                      🌿 What is Panchakarma treatment?
+                    </button>
+                  </h2>
+                  <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
+                      Panchakarma is a comprehensive Ayurvedic detoxification and rejuvenation program that includes five 
+                      therapeutic procedures. It eliminates toxins, balances doshas, strengthens immunity, and promotes 
+                      overall wellness through personalized treatments tailored to your constitution.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="accordion-item mb-3" style={{ 
+                  background: 'var(--gradient-card)',
+                  border: 'none',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  boxShadow: 'var(--shadow-gradient)'
+                }}>
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style={{
+                      background: 'transparent',
+                      border: 'none',
+                      fontWeight: '600',
+                      color: 'var(--primary-text)'
+                    }}>
+                      ✨ Are your singing bowls authentic?
+                    </button>
+                  </h2>
+                  <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
+                      Yes, all our singing bowls are handcrafted by traditional artisans using ancient techniques. Each bowl 
+                      is made from seven sacred metals and tuned to specific chakra frequencies. We provide certificates of 
+                      authenticity and detailed information about each instrument's origin and properties.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="accordion-item mb-3" style={{ 
+                  background: 'var(--gradient-card)',
+                  border: 'none',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  boxShadow: 'var(--shadow-gradient)'
+                }}>
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style={{
+                      background: 'transparent',
+                      border: 'none',
+                      fontWeight: '600',
+                      color: 'var(--primary-text)'
+                    }}>
+                      📍 Do you offer online consultations?
+                    </button>
+                  </h2>
+                  <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
+                      Yes, we offer virtual Ayurvedic consultations and sound healing guidance sessions. Our experienced 
+                      practitioners can provide personalized recommendations, dosha analysis, and teach you how to use 
+                      our instruments for maximum healing benefit from anywhere in the world.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="accordion-item mb-3" style={{ 
+                  background: 'var(--gradient-card)',
+                  border: 'none',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  boxShadow: 'var(--shadow-gradient)'
+                }}>
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style={{
+                      background: 'transparent',
+                      border: 'none',
+                      fontWeight: '600',
+                      color: 'var(--primary-text)'
+                    }}>
+                      🏔️ Why choose Rishikesh for healing?
+                    </button>
+                  </h2>
+                  <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
+                      Rishikesh is known as the "Yoga Capital of the World" and sits at the foothills of the Himalayas along 
+                      the sacred Ganges River. The high vibrational energy, pure environment, and spiritual atmosphere create 
+                      the perfect conditions for deep healing and transformation.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Footer with Keywords and SEO */}
+      <footer style={{ 
+        background: 'var(--gradient-primary)',
+        color: 'var(--light-text)',
+        position: 'relative'
+      }}>
+        <div className="container py-5">
           <div className="row g-4">
             <div className="col-lg-4">
-              <h5 className="font-heading fw-bold mb-4 text-warning">🕉️ Rishikesh Healing Center</h5>
-              <p className="mb-3">
-                Authentic Ayurvedic treatments and sacred sound healing instruments 
-                in the spiritual heart of India.
+              <h5 className="font-heading fw-bold mb-4" style={{
+                background: 'var(--gradient-warm)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                fontSize: '1.5rem'
+              }}>
+                🕉️ Nityam Wellness
+              </h5>
+              <p className="mb-4" style={{ lineHeight: '1.6' }}>
+                Authentic Ayurvedic treatments, sound healing therapy, and sacred meditation instruments 
+                in the spiritual heart of Rishikesh. Experience ancient wisdom for modern wellness.
               </p>
-              <div className="d-flex gap-3">
-                <span className="fs-4">📧</span>
-                <span className="fs-4">📱</span>
-                <span className="fs-4">🌐</span>
-                <span className="fs-4">📍</span>
+              <div className="d-flex gap-3 mb-4">
+                <a href="#" style={{ 
+                  color: 'var(--light-text)', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease'
+                }} className="hover:scale-110">📧</a>
+                <a href="#" style={{ 
+                  color: 'var(--light-text)', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease'
+                }} className="hover:scale-110">📱</a>
+                <a href="#" style={{ 
+                  color: 'var(--light-text)', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease'
+                }} className="hover:scale-110">🌐</a>
+                <a href="#" style={{ 
+                  color: 'var(--light-text)', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease'
+                }} className="hover:scale-110">📍</a>
               </div>
             </div>
             
             <div className="col-lg-2">
-              <h6 className="fw-bold mb-3 text-warning">Services</h6>
+              <h6 className="fw-bold mb-3" style={{ 
+                color: 'var(--light-text)',
+                textTransform: 'uppercase',
+                letterSpacing: '1px'
+              }}>Healing Services</h6>
               <ul className="list-unstyled">
-                <li><a href="#" className="text-white-50 text-decoration-none">Sound Healing</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Panchakarma</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Abhyanga</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Shirodhara</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Yoga Therapy</a></li>
+                <li className="mb-2"><a href="/healing-services" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🎵 Sound Healing Therapy</a></li>
+                <li className="mb-2"><a href="/healing-services" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🌿 Panchakarma Detox</a></li>
+                <li className="mb-2"><a href="/healing-services" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>💆‍♀️ Abhyanga Massage</a></li>
+                <li className="mb-2"><a href="/healing-services" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🧘‍♀️ Shirodhara Therapy</a></li>
+                <li className="mb-2"><a href="/healing-services" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🕉️ Yoga & Meditation</a></li>
               </ul>
             </div>
             
             <div className="col-lg-2">
-              <h6 className="fw-bold mb-3 text-warning">Products</h6>
+              <h6 className="fw-bold mb-3" style={{ 
+                color: 'var(--light-text)',
+                textTransform: 'uppercase',
+                letterSpacing: '1px'
+              }}>Sacred Instruments</h6>
               <ul className="list-unstyled">
-                <li><a href="#" className="text-white-50 text-decoration-none">Singing Bowls</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Meditation Drums</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Sacred Chimes</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Harmoniums</a></li>
-                <li><a href="#" className="text-white-50 text-decoration-none">Kalimbas</a></li>
+                <li className="mb-2"><a href="#products" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🎶 Tibetan Singing Bowls</a></li>
+                <li className="mb-2"><a href="#products" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🥁 Meditation Drums</a></li>
+                <li className="mb-2"><a href="#products" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🎐 Crystal Chimes</a></li>
+                <li className="mb-2"><a href="#products" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🎹 Harmoniums</a></li>
+                <li className="mb-2"><a href="#products" className="text-decoration-none" style={{ color: 'rgba(255,255,255,0.8)' }}>🎵 Sacred Kalimbas</a></li>
               </ul>
             </div>
             
             <div className="col-lg-2">
-              <h6 className="fw-bold mb-3 text-warning">Keywords</h6>
+              <h6 className="fw-bold mb-3" style={{ 
+                color: 'var(--light-text)',
+                textTransform: 'uppercase',
+                letterSpacing: '1px'
+              }}>SEO Keywords</h6>
               <ul className="list-unstyled small">
-                <li className="text-white-50">Rishikesh Healing</li>
-                <li className="text-white-50">Sound Therapy</li>
-                <li className="text-white-50">Ayurveda Treatment</li>
-                <li className="text-white-50">Meditation Tools</li>
-                <li className="text-white-50">Spiritual Healing</li>
-                <li className="text-white-50">Chakra Balancing</li>
-                <li className="text-white-50">Yoga Rishikesh</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Rishikesh Sound Healing</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Ayurveda Treatment Center</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Tibetan Singing Bowls</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Panchakarma Therapy</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Meditation Instruments</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Spiritual Healing India</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Chakra Balancing</li>
+                <li className="mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>Vibrational Therapy</li>
               </ul>
             </div>
             
             <div className="col-lg-2">
-              <h6 className="fw-bold mb-3 text-warning">Contact</h6>
+              <h6 className="fw-bold mb-3" style={{ 
+                color: 'var(--light-text)',
+                textTransform: 'uppercase',
+                letterSpacing: '1px'
+              }}>Contact Info</h6>
               <ul className="list-unstyled small">
-                <li className="text-white-50">📍 Rishikesh, Uttarakhand</li>
-                <li className="text-white-50">📞 +91 9876543210</li>
-                <li className="text-white-50">📧 info@rishikeshhealing.com</li>
-                <li className="text-white-50">🕐 9 AM - 6 PM IST</li>
+                <li className="mb-2 d-flex align-items-center">
+                  <span className="me-2">📍</span>
+                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>Rishikesh, Uttarakhand, India</span>
+                </li>
+                <li className="mb-2 d-flex align-items-center">
+                  <span className="me-2">📞</span>
+                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>+91 9876543210</span>
+                </li>
+                <li className="mb-2 d-flex align-items-center">
+                  <span className="me-2">📧</span>
+                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>info@nityamwellness.com</span>
+                </li>
+                <li className="mb-2 d-flex align-items-center">
+                  <span className="me-2">🕐</span>
+                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>9 AM - 6 PM IST</span>
+                </li>
+                <li className="mb-2 d-flex align-items-center">
+                  <span className="me-2">🌐</span>
+                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>Worldwide Shipping</span>
+                </li>
               </ul>
             </div>
           </div>
           
-          <hr className="my-4 opacity-25" />
+          <hr style={{ 
+            margin: '3rem 0 2rem', 
+            opacity: '0.3',
+            background: 'var(--gradient-secondary)'
+          }} />
           
           <div className="row">
-            <div className="col-12 text-center">
-              <p className="mb-0 text-white-50">
-                © 2024 Rishikesh Healing Center. Authentic Ayurvedic treatments & sacred sound healing instruments.
+            <div className="col-lg-8">
+              <p className="mb-0 small" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.6' }}>
+                © 2024 Nityam Wellness - Authentic Ayurvedic Treatment Center & Sound Healing Therapy in Rishikesh. 
+                Specializing in Panchakarma detox, Tibetan singing bowls, meditation instruments, chakra balancing, 
+                and holistic wellness programs. Experience ancient healing wisdom in the yoga capital of the world.
               </p>
+            </div>
+            <div className="col-lg-4 text-lg-end">
+              <div className="d-flex justify-content-lg-end gap-3">
+                <a href="/about" className="text-decoration-none small" style={{ color: 'rgba(255,255,255,0.8)' }}>About Us</a>
+                <a href="#faq" className="text-decoration-none small" style={{ color: 'rgba(255,255,255,0.8)' }}>FAQ</a>
+                <a href="#" className="text-decoration-none small" style={{ color: 'rgba(255,255,255,0.8)' }}>Privacy</a>
+                <a href="#" className="text-decoration-none small" style={{ color: 'rgba(255,255,255,0.8)' }}>Terms</a>
+              </div>
             </div>
           </div>
         </div>

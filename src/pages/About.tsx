@@ -1,234 +1,382 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Leaf, Heart, Users, Target, Award, Sparkles } from 'lucide-react';
+import React from 'react';
 
 const About = () => {
-  const team = [
-    {
-      name: "Dr. Rajesh Sharma",
-      title: "Chief Ayurvedic Physician",
-      experience: "25+ Years",
-      specialization: "Panchakarma & Chronic Diseases"
-    },
-    {
-      name: "Dr. Priya Gupta", 
-      title: "Senior Ayurvedic Doctor",
-      experience: "15+ Years",
-      specialization: "Women's Health & Rejuvenation"
-    },
-    {
-      name: "Yoga Master Ananda",
-      title: "Head Yoga Instructor", 
-      experience: "20+ Years",
-      specialization: "Hatha & Ashtanga Yoga"
-    },
-    {
-      name: "Therapist Sunita",
-      title: "Senior Massage Therapist",
-      experience: "12+ Years", 
-      specialization: "Abhyanga & Therapeutic Massage"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Leaf className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold text-foreground">Nityam Wellness</h1>
+    <div style={{ background: 'var(--gradient-hero)', minHeight: '100vh' }}>
+      {/* Navigation */}
+      <nav className="navbar navbar-expand-lg fixed-top" style={{ 
+        background: 'rgba(255, 255, 255, 0.95)', 
+        backdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(102, 126, 234, 0.2)'
+      }}>
+        <div className="container">
+          <a className="navbar-brand font-heading fw-bold fs-3" href="/" style={{ 
+            background: 'var(--gradient-primary)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>
+            <span>🧘‍♀️ Nityam Wellness</span>
+          </a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link fw-medium" href="/" style={{ color: 'var(--primary-text)' }}>Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link fw-medium" href="#about" style={{ color: 'var(--primary-text)' }}>About</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link fw-medium" href="/healing-services" style={{ color: 'var(--primary-text)' }}>Services</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link fw-medium" href="#contact" style={{ color: 'var(--primary-text)' }}>Contact</a>
+              </li>
+            </ul>
           </div>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors">About</a>
-            <a href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
-            <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
-          </nav>
         </div>
-      </header>
+      </nav>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/10">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-earth bg-clip-text text-transparent">
-            About Nityam Wellness
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Rooted in ancient wisdom, dedicated to modern healing. 
-            Discover our story of transformation and wellness.
-          </p>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6 text-foreground">Our Philosophy</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                At Nityam Wellness, we believe that true healing comes from understanding the 
-                interconnectedness of mind, body, and spirit. Our approach combines the 
-                time-tested principles of Ayurveda with modern wellness practices.
+      <section className="pt-5" style={{ paddingTop: '120px' }}>
+        <div className="container">
+          <div className="row align-items-center py-5">
+            <div className="col-lg-6">
+              <h1 className="display-3 font-heading fw-bold mb-4" style={{
+                background: 'var(--gradient-primary)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                About Nityam Wellness
+              </h1>
+              <p className="fs-5 mb-4" style={{ color: 'var(--secondary-text)', lineHeight: '1.8' }}>
+                Founded in the spiritual heart of Rishikesh, Nityam Wellness embodies the ancient wisdom of Ayurveda, 
+                sound healing, and holistic wellness practices. Our journey began with a vision to bridge traditional 
+                healing arts with modern wellness needs.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                We honor the ancient texts while embracing contemporary insights, creating a 
-                healing environment that respects tradition while meeting modern needs.
-              </p>
-              <div className="flex items-center gap-4">
-                <Heart className="h-8 w-8 text-primary" />
-                <span className="text-lg font-semibold text-foreground">Healing with Love and Wisdom</span>
+              <div className="d-flex gap-3 mb-5">
+                <button className="btn btn-primary">
+                  <span>✨ Our Services</span>
+                </button>
+                <button className="btn btn-outline-primary">
+                  <span>📞 Contact Us</span>
+                </button>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <p className="text-center text-muted-foreground">
-                [Beautiful philosophy imagery]
-                <br />
-                Traditional Ayurvedic symbols and nature
-              </p>
+            <div className="col-lg-6">
+              <div className="position-relative">
+                <img 
+                  src="/src/assets/yoga-rishikesh.jpg"
+                  alt="Yoga practice in Rishikesh - Nityam Wellness spiritual healing center"
+                  className="img-fluid shadow-lg"
+                  style={{ 
+                    borderRadius: '30px',
+                    filter: 'drop-shadow(0 20px 40px rgba(102, 126, 234, 0.3))'
+                  }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  top: '20px',
+                  right: '20px',
+                  background: 'var(--gradient-card)',
+                  borderRadius: '20px',
+                  padding: '15px 20px',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  <div className="d-flex align-items-center">
+                    <span style={{ fontSize: '1.5rem', marginRight: '10px' }}>🏔️</span>
+                    <div>
+                      <div style={{ fontWeight: '600', color: 'var(--primary-text)', fontSize: '0.9rem' }}>Rishikesh</div>
+                      <div style={{ color: 'var(--secondary-text)', fontSize: '0.8rem' }}>Yoga Capital</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="p-8">
-              <CardHeader className="text-center">
-                <Target className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle className="text-2xl">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">
-                  To provide authentic Ayurvedic healing experiences that restore balance, 
-                  promote wellness, and awaken the natural healing potential within each individual, 
-                  while preserving and sharing the sacred wisdom of our ancestors.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="p-8">
-              <CardHeader className="text-center">
-                <Sparkles className="h-12 w-12 text-accent-sage mx-auto mb-4" />
-                <CardTitle className="text-2xl">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">
-                  To be a global beacon of authentic Ayurvedic wisdom, inspiring people worldwide 
-                  to embrace holistic wellness practices and live in harmony with their true nature, 
-                  creating a healthier and more conscious world.
-                </p>
-              </CardContent>
-            </Card>
+      {/* Our Story Section */}
+      <section className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 mx-auto text-center">
+              <h2 className="display-4 font-heading fw-bold mb-5" style={{
+                background: 'var(--gradient-secondary)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Our Sacred Journey
+              </h2>
+              <div className="row g-4">
+                <div className="col-md-4">
+                  <div className="card h-100" style={{ 
+                    background: 'var(--gradient-card)',
+                    border: 'none',
+                    borderRadius: '20px',
+                    boxShadow: 'var(--shadow-gradient)'
+                  }}>
+                    <div className="card-body text-center p-4">
+                      <div style={{ 
+                        fontSize: '3rem',
+                        background: 'var(--gradient-warm)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        marginBottom: '1rem'
+                      }}>🧘‍♀️</div>
+                      <h5 className="font-heading fw-bold mb-3" style={{ color: 'var(--primary-text)' }}>
+                        Ancient Wisdom
+                      </h5>
+                      <p style={{ color: 'var(--secondary-text)' }}>
+                        Rooted in 5000+ years of Ayurvedic tradition and sound healing practices passed down through generations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="card h-100" style={{ 
+                    background: 'var(--gradient-card)',
+                    border: 'none',
+                    borderRadius: '20px',
+                    boxShadow: 'var(--shadow-gradient)'
+                  }}>
+                    <div className="card-body text-center p-4">
+                      <div style={{ 
+                        fontSize: '3rem',
+                        background: 'var(--gradient-accent)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        marginBottom: '1rem'
+                      }}>🎵</div>
+                      <h5 className="font-heading fw-bold mb-3" style={{ color: 'var(--primary-text)' }}>
+                        Sound Healing
+                      </h5>
+                      <p style={{ color: 'var(--secondary-text)' }}>
+                        Authentic Tibetan singing bowls, crystal bowls, and sacred instruments for vibrational therapy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="card h-100" style={{ 
+                    background: 'var(--gradient-card)',
+                    border: 'none',
+                    borderRadius: '20px',
+                    boxShadow: 'var(--shadow-gradient)'
+                  }}>
+                    <div className="card-body text-center p-4">
+                      <div style={{ 
+                        fontSize: '3rem',
+                        background: 'var(--gradient-luxury)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        marginBottom: '1rem'
+                      }}>🌿</div>
+                      <h5 className="font-heading fw-bold mb-3" style={{ color: 'var(--primary-text)' }}>
+                        Holistic Approach
+                      </h5>
+                      <p style={{ color: 'var(--secondary-text)' }}>
+                        Integrating mind, body, and spirit healing through personalized wellness programs and therapies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Meet Our Healing Team</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our experienced practitioners bring decades of knowledge and compassionate care 
-              to guide you on your wellness journey.
-            </p>
+      <section className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 text-center mb-5">
+              <h2 className="display-4 font-heading fw-bold mb-3" style={{
+                background: 'var(--gradient-primary)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Our Healing Masters
+              </h2>
+              <p className="fs-5" style={{ color: 'var(--secondary-text)', maxWidth: '600px', margin: '0 auto' }}>
+                Certified practitioners with decades of experience in Ayurveda, yoga, and sound healing therapies.
+              </p>
+            </div>
           </div>
+          <div className="row g-4">
+            <div className="col-lg-4 col-md-6">
+              <div className="card" style={{ 
+                background: 'var(--gradient-card)',
+                border: 'none',
+                borderRadius: '20px',
+                boxShadow: 'var(--shadow-gradient)',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src="/src/assets/testimonial-1.jpg"
+                  alt="Dr. Priya Sharma - Ayurveda Expert"
+                  className="card-img-top"
+                  style={{ height: '300px', objectFit: 'cover' }}
+                />
+                <div className="card-body p-4">
+                  <h5 className="font-heading fw-bold mb-2" style={{ color: 'var(--primary-text)' }}>
+                    Dr. Priya Sharma
+                  </h5>
+                  <p className="text-muted mb-3">Ayurveda & Panchakarma Specialist</p>
+                  <p style={{ color: 'var(--secondary-text)', fontSize: '0.9rem' }}>
+                    25+ years experience in traditional Ayurvedic medicine and detoxification therapies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="card" style={{ 
+                background: 'var(--gradient-card)',
+                border: 'none',
+                borderRadius: '20px',
+                boxShadow: 'var(--shadow-gradient)',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src="/src/assets/testimonial-2.jpg"
+                  alt="Master Rajesh - Sound Healing Expert"
+                  className="card-img-top"
+                  style={{ height: '300px', objectFit: 'cover' }}
+                />
+                <div className="card-body p-4">
+                  <h5 className="font-heading fw-bold mb-2" style={{ color: 'var(--primary-text)' }}>
+                    Master Rajesh
+                  </h5>
+                  <p className="text-muted mb-3">Sound Healing & Meditation Master</p>
+                  <p style={{ color: 'var(--secondary-text)', fontSize: '0.9rem' }}>
+                    Expert in Tibetan singing bowls, crystal healing, and vibrational therapy techniques.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="card" style={{ 
+                background: 'var(--gradient-card)',
+                border: 'none',
+                borderRadius: '20px',
+                boxShadow: 'var(--shadow-gradient)',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src="/src/assets/testimonial-3.jpg"
+                  alt="Yoga Master Ananya - Wellness Coach"
+                  className="card-img-top"
+                  style={{ height: '300px', objectFit: 'cover' }}
+                />
+                <div className="card-body p-4">
+                  <h5 className="font-heading fw-bold mb-2" style={{ color: 'var(--primary-text)' }}>
+                    Yoga Master Ananya
+                  </h5>
+                  <p className="text-muted mb-3">Yoga & Wellness Coach</p>
+                  <p style={{ color: 'var(--secondary-text)', fontSize: '0.9rem' }}>
+                    Certified in Hatha, Vinyasa, and therapeutic yoga with holistic wellness expertise.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-warm transition-all duration-300">
-                <CardHeader>
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-12 w-12 text-primary" />
+      {/* Mission & Values */}
+      <section className="py-5">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <img 
+                src="/src/assets/yoga-meditation.jpg"
+                alt="Meditation and mindfulness practice - Nityam Wellness mission"
+                className="img-fluid shadow-lg"
+                style={{ 
+                  borderRadius: '30px',
+                  filter: 'drop-shadow(0 20px 40px rgba(240, 147, 251, 0.3))'
+                }}
+              />
+            </div>
+            <div className="col-lg-6 ps-lg-5">
+              <h2 className="display-4 font-heading fw-bold mb-4" style={{
+                background: 'var(--gradient-secondary)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Our Mission & Values
+              </h2>
+              <p className="fs-5 mb-4" style={{ color: 'var(--secondary-text)', lineHeight: '1.8' }}>
+                To create a sanctuary where ancient healing wisdom meets modern wellness needs, 
+                fostering transformation and inner peace for every soul that enters our space.
+              </p>
+              
+              <div className="row g-3">
+                <div className="col-12">
+                  <div className="d-flex align-items-start">
+                    <div style={{ 
+                      background: 'var(--gradient-warm)',
+                      borderRadius: '15px',
+                      padding: '12px',
+                      marginRight: '15px',
+                      fontSize: '1.2rem'
+                    }}>💎</div>
+                    <div>
+                      <h6 className="fw-bold mb-1" style={{ color: 'var(--primary-text)' }}>Authenticity</h6>
+                      <small style={{ color: 'var(--secondary-text)' }}>
+                        Preserving traditional healing practices with genuine care and respect
+                      </small>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <p className="text-primary font-medium">{member.title}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    <Award className="h-4 w-4 inline mr-1" />
-                    {member.experience}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {member.specialization}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Facility Section */}
-      <section className="py-20 bg-accent/5">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Our Healing Sanctuary</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Experience tranquility in our thoughtfully designed spaces, 
-              where every detail supports your journey to wellness.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <p className="text-muted-foreground">[Treatment Rooms]</p>
+                </div>
+                <div className="col-12">
+                  <div className="d-flex align-items-start">
+                    <div style={{ 
+                      background: 'var(--gradient-accent)',
+                      borderRadius: '15px',
+                      padding: '12px',
+                      marginRight: '15px',
+                      fontSize: '1.2rem'
+                    }}>🌱</div>
+                    <div>
+                      <h6 className="fw-bold mb-1" style={{ color: 'var(--primary-text)' }}>Growth</h6>
+                      <small style={{ color: 'var(--secondary-text)' }}>
+                        Supporting personal transformation and spiritual evolution
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <div className="d-flex align-items-start">
+                    <div style={{ 
+                      background: 'var(--gradient-luxury)',
+                      borderRadius: '15px',
+                      padding: '12px',
+                      marginRight: '15px',
+                      fontSize: '1.2rem'
+                    }}>🤝</div>
+                    <div>
+                      <h6 className="fw-bold mb-1" style={{ color: 'var(--primary-text)' }}>Compassion</h6>
+                      <small style={{ color: 'var(--secondary-text)' }}>
+                        Providing healing with empathy, understanding, and unconditional love
+                      </small>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">Treatment Spaces</h3>
-                <p className="text-sm text-muted-foreground">
-                  Serene treatment rooms designed for deep relaxation and healing
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-accent/20 to-earth/20 flex items-center justify-center">
-                <p className="text-muted-foreground">[Yoga Hall]</p>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">Yoga & Meditation Hall</h3>
-                <p className="text-sm text-muted-foreground">
-                  Spacious hall with mountain views for yoga and meditation practice
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-earth/20 to-secondary/20 flex items-center justify-center">
-                <p className="text-muted-foreground">[Garden]</p>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-2">Healing Gardens</h3>
-                <p className="text-sm text-muted-foreground">
-                  Medicinal herb gardens and peaceful spaces for contemplation
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary-warm text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Begin Your Journey?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Connect with our team to learn more about our approach and 
-            discover how we can support your wellness goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-              Schedule Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Contact Us
-            </Button>
+            </div>
           </div>
         </div>
       </section>
