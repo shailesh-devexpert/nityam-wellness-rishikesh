@@ -288,11 +288,21 @@ const Index = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="d-flex gap-2">
-                      <button className="btn btn-outline-primary btn-sm flex-fill">
+                    <div className="d-flex gap-2 flex-column flex-sm-row">
+                      <button className="btn btn-outline-primary btn-sm" style={{
+                        fontSize: '0.8rem',
+                        padding: '6px 12px',
+                        borderRadius: '8px',
+                        transition: 'all 0.2s ease'
+                      }}>
                         <span>📖 Details</span>
                       </button>
-                      <button className="btn btn-primary btn-sm flex-fill">
+                      <button className="btn btn-primary btn-sm" style={{
+                        fontSize: '0.8rem',
+                        padding: '6px 12px',
+                        borderRadius: '8px',
+                        transition: 'all 0.2s ease'
+                      }}>
                         <span>💳 Buy Now</span>
                       </button>
                     </div>
