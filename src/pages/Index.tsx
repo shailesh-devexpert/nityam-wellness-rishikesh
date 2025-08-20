@@ -288,9 +288,14 @@ const Index = () => {
                         </div>
                       </div>
                     </div>
-                    <button className="btn btn-primary w-100">
-                      <span>✨ Add to Collection</span>
-                    </button>
+                    <div className="d-flex gap-2">
+                      <button className="btn btn-outline-primary btn-sm flex-fill">
+                        <span>📖 Details</span>
+                      </button>
+                      <button className="btn btn-primary btn-sm flex-fill">
+                        <span>💳 Buy Now</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
