@@ -15,7 +15,7 @@ const HealingServices = () => {
     {
       id: 2,
       name: "Tibetan Singing Bowl Session",
-      image: "/src/assets/ayurveda-symbols.jpg",
+      image: "/src/assets/tibetan-singing-bowl.jpg",
       duration: "45 minutes",
       price: "₹3,500",
       description: "Experience the ancient power of Tibetan singing bowls that create therapeutic frequencies for chakra balancing.",
@@ -24,6 +24,46 @@ const HealingServices = () => {
     },
     {
       id: 3,
+      name: "Panchakarma Detox Program",
+      image: "/src/assets/panchakarma.jpg",
+      duration: "7 days",
+      price: "₹25,000",
+      description: "Complete Ayurvedic detoxification program including five traditional therapies for deep cleansing and rejuvenation.",
+      benefits: ["Complete detox", "Cellular renewal", "Digestive reset", "Mental clarity"],
+      category: "Ayurvedic Healing"
+    },
+    {
+      id: 4,
+      name: "Chakra Balancing Therapy",
+      image: "/src/assets/chakra-balancing.jpg",
+      duration: "90 minutes",
+      price: "₹5,500",
+      description: "Holistic chakra alignment using crystals, sound frequencies, and energy healing techniques for complete balance.",
+      benefits: ["Energy alignment", "Emotional stability", "Spiritual clarity", "Physical wellness"],
+      category: "Energy Healing"
+    },
+    {
+      id: 5,
+      name: "Meditation Instruments Training",
+      image: "/src/assets/meditation-instruments.jpg",
+      duration: "2 hours",
+      price: "₹3,000",
+      description: "Learn to use traditional meditation instruments including singing bowls, bells, and chimes for personal practice.",
+      benefits: ["Skill development", "Personal practice", "Mindfulness training", "Inner peace"],
+      category: "Training"
+    },
+    {
+      id: 6,
+      name: "Holistic Wellness Program",
+      image: "/src/assets/holistic-wellness.jpg",
+      duration: "30 days",
+      price: "₹35,000",
+      description: "Comprehensive wellness program combining Ayurveda, yoga, meditation, and sound healing for complete transformation.",
+      benefits: ["Complete transformation", "Lifestyle change", "Health optimization", "Spiritual growth"],
+      category: "Wellness Programs"
+    },
+    {
+      id: 7,
       name: "Gong Meditation",
       image: "/src/assets/yoga-meditation.jpg",
       duration: "30 minutes",
@@ -33,9 +73,9 @@ const HealingServices = () => {
       category: "Sound Healing"
     },
     {
-      id: 4,
+      id: 8,
       name: "Crystal Sound Healing",
-      image: "/src/assets/yoga-rishikesh.jpg",
+      image: "/src/assets/crystal-healing.jpg",
       duration: "75 minutes",
       price: "₹6,000",
       description: "Combination of crystal bowls and gemstone therapy for multi-dimensional healing experience.",
@@ -43,24 +83,52 @@ const HealingServices = () => {
       category: "Crystal Therapy"
     },
     {
-      id: 5,
+      id: 9,
       name: "Voice Activation Therapy",
-      image: "/src/assets/testimonial-1.jpg",
+      image: "/src/assets/voice-therapy.jpg",
       duration: "50 minutes",
       price: "₹4,000",
       description: "Use your own voice as a healing instrument through guided toning and chanting techniques.",
       benefits: ["Throat chakra opening", "Self-expression", "Confidence building", "Vocal healing"],
       category: "Voice Therapy"
+    }
+  ];
+
+  const specialPrograms = [
+    {
+      id: 1,
+      title: "Panchakarma Detox Program",
+      description: "Panchakarma is the crown jewel of Ayurvedic healing, a comprehensive detoxification and rejuvenation program that cleanses the body at the deepest cellular level. This ancient five-action therapy includes Vamana (therapeutic vomiting), Virechana (purgation), Basti (medicated enemas), Nasya (nasal medication), and Raktamokshana (bloodletting). Our 7-21 day programs are customized based on individual constitution and health needs, providing profound healing and transformation.",
+      benefits: ["Complete cellular detox", "Immune system boost", "Mental clarity enhancement", "Digestive system reset", "Stress elimination", "Chronic disease management"],
+      image: "/src/assets/panchakarma-rishikesh.jpg"
     },
     {
-      id: 6,
-      name: "Group Sound Circle",
-      image: "/src/assets/testimonial-2.jpg",
-      duration: "90 minutes",
-      price: "₹2,000",
-      description: "Join a community sound healing circle for shared healing energy and collective transformation.",
-      benefits: ["Community connection", "Shared energy", "Group healing", "Social support"],
-      category: "Group Sessions"
+      id: 2,
+      title: "Tibetan Singing Bowls Mastery",
+      description: "Discover the ancient art of Tibetan singing bowls, sacred instruments that have been used for meditation and healing for over 2,500 years. Made from seven sacred metals representing celestial bodies, these bowls produce pure harmonic overtones that synchronize brain waves and promote deep healing. Our training covers bowl selection, playing techniques, therapeutic applications, and creating healing sessions for others.",
+      benefits: ["Sound healing mastery", "Meditation enhancement", "Stress reduction", "Energy balancing", "Therapeutic skills", "Spiritual awakening"],
+      image: "/src/assets/tibetan-bowls.jpg"
+    },
+    {
+      id: 3,
+      title: "Sacred Meditation Instruments",
+      description: "Learn the traditional use of sacred meditation instruments including crystal bowls, Tibetan bells, chimes, gongs, and didgeridoos. Each instrument carries unique frequencies that affect different aspects of consciousness and healing. Our comprehensive training covers the history, spiritual significance, and practical application of these powerful tools for personal practice and healing others.",
+      benefits: ["Instrument mastery", "Frequency healing", "Meditation deepening", "Cultural wisdom", "Healing techniques", "Sound therapy skills"],
+      image: "/src/assets/meditation-tools.jpg"
+    },
+    {
+      id: 4,
+      title: "Chakra Balancing & Energy Healing",
+      description: "Experience profound transformation through our comprehensive chakra balancing program that combines ancient wisdom with modern energy healing techniques. Using crystals, sound frequencies, color therapy, and meditation, we help align your seven energy centers for optimal physical, emotional, and spiritual health. Each session is customized to address specific imbalances and promote holistic wellness.",
+      benefits: ["Energy alignment", "Emotional healing", "Physical wellness", "Spiritual growth", "Mental clarity", "Life force enhancement"],
+      image: "/src/assets/chakra-healing.jpg"
+    },
+    {
+      id: 5,
+      title: "Holistic Wellness Programs",
+      description: "Our signature holistic wellness programs integrate the best of Eastern and Western healing modalities for complete mind-body-spirit transformation. Combining Ayurveda, yoga, meditation, sound healing, nutrition, and lifestyle counseling, these intensive programs are designed to create lasting positive changes in your health and consciousness. Available in 7, 14, 21, and 30-day formats.",
+      benefits: ["Complete transformation", "Lifestyle optimization", "Health restoration", "Spiritual awakening", "Stress mastery", "Life purpose clarity"],
+      image: "/src/assets/wellness-program.jpg"
     }
   ];
 
@@ -210,9 +278,82 @@ const HealingServices = () => {
                       <div>
                         <span className="fw-bold fs-4" style={{ color: '#1A2B42' }}>{service.price}</span>
                       </div>
-                      <button className="btn btn-primary">
-                        <span>🎵 Book Session</span>
-                      </button>
+                      <div className="d-flex gap-2">
+                        <button className="btn btn-outline-primary btn-sm">
+                          <span>📖 More Details</span>
+                        </button>
+                        <button className="btn btn-primary btn-sm">
+                          <span>💳 Buy Now</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Special Programs Section */}
+      <section className="py-5" style={{ background: 'rgba(248, 250, 252, 0.8)' }}>
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="display-4 font-heading fw-bold mb-4" style={{ color: '#1A2B42' }}>
+              🌟 Specialized Wellness Programs
+            </h2>
+            <p className="fs-5" style={{ color: '#1A2B42', opacity: '0.7', maxWidth: '800px', margin: '0 auto' }}>
+              Comprehensive healing programs designed for deep transformation and lasting wellness
+            </p>
+          </div>
+          
+          <div className="row g-5">
+            {specialPrograms.map((program, index) => (
+              <div key={program.id} className="col-lg-12">
+                <div className={`row align-items-center ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
+                  <div className="col-lg-6">
+                    <div className="pe-lg-4">
+                      <h3 className="display-6 font-heading fw-bold mb-4" style={{ color: '#1A2B42' }}>
+                        {program.title}
+                      </h3>
+                      <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.8', lineHeight: '1.7' }}>
+                        {program.description}
+                      </p>
+                      <div className="row g-3 mb-4">
+                        {program.benefits.map((benefit, idx) => (
+                          <div key={idx} className="col-md-6">
+                            <div className="d-flex align-items-center">
+                              <span className="me-2">✨</span>
+                              <span style={{ color: '#1A2B42', fontSize: '0.95rem' }}>{benefit}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="d-flex gap-3 flex-wrap">
+                        <button className="btn btn-primary">
+                          <span>📞 Learn More</span>
+                        </button>
+                        <button className="btn btn-outline-primary">
+                          <span>💳 Enroll Now</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="position-relative">
+                      <img 
+                        src={program.image} 
+                        alt={program.title}
+                        className="img-fluid rounded-4 shadow-lg"
+                        style={{ 
+                          width: '100%',
+                          height: '400px',
+                          objectFit: 'cover'
+                        }}
+                      />
+                      <div className="position-absolute top-0 start-0 w-100 h-100 rounded-4" style={{
+                        background: 'linear-gradient(45deg, rgba(26, 43, 66, 0.1) 0%, rgba(232, 244, 253, 0.1) 100%)'
+                      }}></div>
                     </div>
                   </div>
                 </div>
