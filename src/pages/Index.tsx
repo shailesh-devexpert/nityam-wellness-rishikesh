@@ -62,10 +62,10 @@ const Index = () => {
     {
       id: 5,
       name: "Om Sacred Drum",
-      price: "₹7,500",
-      originalPrice: "₹9,000",
+      price: "₹4,500",
+      originalPrice: "₹6,000",
       image: "/lovable-uploads/aedf52bd-5343-4dd1-8358-32385b90ceda.png",
-      description: "Beautifully decorated drum with Om symbol",
+      description: "Beautifully decorated drum with Om symbol (6-inch)",
       rating: 5
     },
     {
