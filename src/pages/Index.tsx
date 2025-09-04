@@ -125,7 +125,7 @@ const Index = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-            <span className="glow">🧘‍♀️ Nityam Wellness</span>
+            <span className="glow">🧘‍♀️ Nityam Veda</span>
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
@@ -1244,14 +1244,14 @@ const Index = () => {
                   <span className="me-2">📍</span>
                   <span style={{ color: 'rgba(255,255,255,0.8)' }}>Rishikesh, Uttarakhand, India</span>
                 </li>
-                <li className="mb-2 d-flex align-items-center">
-                  <span className="me-2">📞</span>
-                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>+91 9876543210</span>
-                </li>
-                <li className="mb-2 d-flex align-items-center">
-                  <span className="me-2">📧</span>
-                  <span style={{ color: 'rgba(255,255,255,0.8)' }}>info@nityamwellness.com</span>
-                </li>
+                 <li className="mb-2 d-flex align-items-center">
+                   <span className="me-2">📞</span>
+                   <span style={{ color: 'rgba(255,255,255,0.8)' }}>+91-9897579168</span>
+                 </li>
+                 <li className="mb-2 d-flex align-items-center">
+                   <span className="me-2">📧</span>
+                   <span style={{ color: 'rgba(255,255,255,0.8)' }}>info@nityamveda.com</span>
+                 </li>
                 <li className="mb-2 d-flex align-items-center">
                   <span className="me-2">🕐</span>
                   <span style={{ color: 'rgba(255,255,255,0.8)' }}>9 AM - 6 PM IST</span>
@@ -1272,11 +1272,11 @@ const Index = () => {
           
           <div className="row">
             <div className="col-lg-8">
-              <p className="mb-0 small" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.6' }}>
-                © 2024 Nityam Wellness - Authentic Ayurvedic Treatment Center & Sound Healing Therapy in Rishikesh. 
-                Specializing in Panchakarma detox, Tibetan singing bowls, meditation instruments, chakra balancing, 
-                and holistic wellness programs. Experience ancient healing wisdom in the yoga capital of the world.
-              </p>
+               <p className="mb-0 small" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.6' }}>
+                 © 2024 Nityam Veda - Authentic Ayurvedic Treatment Center & Sound Healing Therapy in Rishikesh. 
+                 Specializing in Panchakarma detox, Tibetan singing bowls, meditation instruments, chakra balancing, 
+                 and holistic wellness programs. Experience ancient healing wisdom in the yoga capital of the world.
+               </p>
             </div>
             <div className="col-lg-4 text-lg-end">
               <div className="d-flex justify-content-lg-end gap-3">
