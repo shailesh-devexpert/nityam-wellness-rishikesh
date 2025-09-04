@@ -314,6 +314,501 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Yoga Accessories Section */}
+      <section id="yoga-accessories" className="py-5" style={{ 
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 247, 255, 0.5) 100%)',
+        position: 'relative'
+      }}>
+        <div className="container">
+          <div className="row mb-5">
+            <div className="col-12 text-center">
+              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#1A2B42' }}>
+                🧘‍♀️ Yoga Accessories
+              </h2>
+              <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.6', maxWidth: '700px', margin: '0 auto' }}>
+                Enhance your yoga practice with our premium collection of eco-friendly accessories. Each item is thoughtfully selected to support your journey towards physical wellness and spiritual growth.
+              </p>
+              <div style={{ 
+                width: '100px', 
+                height: '2px', 
+                background: 'linear-gradient(135deg, #F8FBFF, #F0F7FF)',
+                margin: '2rem auto',
+                borderRadius: '2px'
+              }}></div>
+            </div>
+          </div>
+          
+          <div className="row g-4">
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #8B4513, #A0522D)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🧘‍♀️</div>
+                  <div className="position-absolute top-0 end-0 m-3" style={{ zIndex: '3' }}>
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem',
+                      border: '1px solid #E8EDF5'
+                    }}>🌱 Eco-Friendly</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Cork Yoga Mat</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Natural cork surface with excellent grip and antimicrobial properties</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★★</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹3,500</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹4,200</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animationDelay: '0.1s',
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #4A90E2, #7BB3F2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🧱</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>✨ Premium</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Yoga Blocks (Set of 2)</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>High-density EVA foam blocks for perfect alignment and support</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★★</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹1,200</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹1,500</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animationDelay: '0.2s',
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #9B59B6, #C39BD3)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🎗️</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>🔄 Adjustable</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Yoga Belt</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Durable cotton strap with adjustable buckle for deeper stretches</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★☆</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(4/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹800</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹1,000</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animationDelay: '0.3s',
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #16A085, #48C9B0)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🫖</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>🧼 Cleansing</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Jalneti Pot</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Traditional ceramic neti pot for nasal cleansing and respiratory health</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★★</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹600</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹750</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Natural Products Section */}
+      <section id="natural-products" className="py-5" style={{ 
+        background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.3) 0%, rgba(255, 248, 220, 0.4) 50%, rgba(209, 236, 241, 0.3) 100%)',
+        position: 'relative'
+      }}>
+        <div className="container">
+          <div className="row mb-5">
+            <div className="col-12 text-center">
+              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#1A2B42' }}>
+                🌿 Natural Products
+              </h2>
+              <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.6', maxWidth: '700px', margin: '0 auto' }}>
+                Experience the pure essence of nature with our collection of alcohol-free perfumes, therapeutic essential oils, handcrafted incense sticks infused with spiritual energy, and traditional Ayurvedic copper vessels for holistic wellness.
+              </p>
+              <div style={{ 
+                width: '100px', 
+                height: '2px', 
+                background: 'linear-gradient(135deg, #F8FBFF, #F0F7FF)',
+                margin: '2rem auto',
+                borderRadius: '2px'
+              }}></div>
+            </div>
+          </div>
+          
+          <div className="row g-4">
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #E8B4F8, #D896FF)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🌸</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>🚫 Alcohol-Free</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Natural Perfumes</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Alcohol-free floral and herbal perfumes crafted from pure essential oils</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★★</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹1,800</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹2,200</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animationDelay: '0.1s',
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #58D68D, #82E5AA)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🫙</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>🌿 Pure</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Essential Oils Set</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Premium therapeutic grade essential oils for aromatherapy and healing</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★★</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹2,500</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹3,000</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animationDelay: '0.2s',
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #F7DC6F, #F8C471)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🔥</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>✋ Handmade</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Spiritual Incense Sticks</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Handcrafted essence sticks infused with spiritual energy for meditation</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★☆</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(4/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹450</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹600</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6">
+              <div className="card product-card h-100" style={{ 
+                animationDelay: '0.3s',
+                animation: 'fadeInUp 0.8s ease-out both'
+              }}>
+                <div className="position-relative">
+                  <div style={{
+                    height: '250px',
+                    background: 'linear-gradient(135deg, #E67E22, #F39C12)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem'
+                  }}>🏺</div>
+                  <div className="position-absolute top-0 end-0 m-3">
+                    <span className="badge" style={{ 
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      color: '#1A2B42',
+                      borderRadius: '15px',
+                      padding: '6px 12px',
+                      fontSize: '0.75rem'
+                    }}>🕉️ Ayurvedic</span>
+                  </div>
+                </div>
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Copper Water Bottle</h5>
+                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Traditional Ayurvedic copper vessel for storing and purifying water</p>
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center mb-2">
+                      <span className="text-warning">★★★★★</span>
+                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹1,500</span>
+                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹1,800</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-2 flex-column flex-sm-row">
+                    <button className="btn btn-outline-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>📖 Details</button>
+                    <button className="btn btn-primary btn-sm" style={{
+                      fontSize: '0.8rem',
+                      padding: '6px 12px',
+                      borderRadius: '8px'
+                    }}>💳 Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sound Healing Feature Section */}
       <section id="healing" className="py-5" style={{ 
         background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.4) 0%, rgba(255, 248, 220, 0.3) 50%, rgba(209, 236, 241, 0.4) 100%)',
