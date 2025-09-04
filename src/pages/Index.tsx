@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import corkYogaMat from "@/assets/cork-yoga-mat.jpg";
+import yogaBlocks from "@/assets/yoga-blocks.jpg";
+import yogaBelt from "@/assets/yoga-belt.jpg";
+import jalnetiPot from "@/assets/jalneti-pot.jpg";
+import naturalPerfumes from "@/assets/natural-perfumes.jpg";
+import essentialOilsSet from "@/assets/essential-oils-set.jpg";
+import spiritualIncense from "@/assets/spiritual-incense.jpg";
+import copperWaterBottle from "@/assets/copper-water-bottle.jpg";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -345,7 +353,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/cork-yoga-mat.jpg" 
+                    src={corkYogaMat} 
                     alt="Cork Yoga Mat" 
                     style={{
                       width: '100%',
@@ -403,7 +411,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/yoga-blocks.jpg" 
+                    src={yogaBlocks} 
                     alt="Yoga Blocks Set" 
                     style={{
                       width: '100%',
@@ -460,7 +468,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/yoga-belt.jpg" 
+                    src={yogaBelt} 
                     alt="Yoga Belt" 
                     style={{
                       width: '100%',
@@ -517,7 +525,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/jalneti-pot.jpg" 
+                    src={jalnetiPot} 
                     alt="Jalneti Pot" 
                     style={{
                       width: '100%',
@@ -601,7 +609,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/natural-perfumes.jpg" 
+                    src={naturalPerfumes} 
                     alt="Natural Perfumes" 
                     style={{
                       width: '100%',
@@ -658,7 +666,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/essential-oils-set.jpg" 
+                    src={essentialOilsSet} 
                     alt="Essential Oils Set" 
                     style={{
                       width: '100%',
@@ -715,7 +723,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/spiritual-incense.jpg" 
+                    src={spiritualIncense} 
                     alt="Spiritual Incense Sticks" 
                     style={{
                       width: '100%',
@@ -772,7 +780,7 @@ const Index = () => {
               }}>
                 <div className="position-relative">
                   <img 
-                    src="/src/assets/copper-water-bottle.jpg" 
+                    src={copperWaterBottle} 
                     alt="Copper Water Bottle" 
                     style={{
                       width: '100%',
