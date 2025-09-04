@@ -26,8 +26,8 @@ const Index = () => {
     {
       id: 1,
       name: "Sacred Singing Bowls Set",
-      price: "₹12,500",
-      originalPrice: "₹15,000",
+      price: "₹75,500",
+      originalPrice: "₹95,000",
       image: "/lovable-uploads/4b8fcfd3-b526-4b15-8f68-399b04fb870c.png",
       description: "Complete set of 7 chakra-tuned singing bowls for deep meditation",
       rating: 5
