@@ -6,7 +6,7 @@ const Index = () => {
 
   const heroSlides = [
     {
-      title: "Nityam Wellness",
+      title: "Nityam Veda",
       subtitle: "Sacred Journey to Inner Peace",
       description: "Discover ancient healing wisdom through authentic Ayurvedic treatments and sound therapy in the serene landscapes of Rishikesh."
     },
