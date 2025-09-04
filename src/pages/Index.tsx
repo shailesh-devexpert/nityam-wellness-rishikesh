@@ -18,28 +18,28 @@ const Index = () => {
   const heroSlides = [
     {
       title: "Nityam Veda",
-      subtitle: "Sacred Journey to Inner Peace",
-      description: "Discover ancient healing wisdom through authentic Ayurvedic treatments and sound therapy in the serene landscapes of Rishikesh."
+      subtitle: "Ancient Healing Wisdom",
+      description: "Experience authentic Ayurvedic treatments and sacred sound healing in the spiritual heart of Rishikesh."
     },
     {
-      title: "Holistic Healing Experience",
-      subtitle: "Mind • Body • Spirit Harmony",
-      description: "Transform your well-being through time-tested practices that nurture your complete self with gentle, natural healing."
+      title: "Sacred Sound Healing",
+      subtitle: "Tibetan Singing Bowls",
+      description: "Transform your life through the healing frequencies of traditional instruments."
     },
     {
-      title: "Sacred Sound & Wellness",
-      subtitle: "Vibrational Medicine for Modern Life",
-      description: "Experience the profound healing power of ancient sound instruments designed to restore balance and inner tranquility."
+      title: "Spiritual Wellness",
+      subtitle: "Mind Body Soul",
+      description: "Discover inner peace through time-tested Ayurvedic practices and meditation."
     }
   ];
 
-  const products = [
+  const musicProducts = [
     {
       id: 1,
-      name: "Sacred Singing Bowls Set",
+      name: "7 Chakra Singing Bowl Set",
       price: "₹75,500",
       originalPrice: "₹95,000",
-      image: "/lovable-uploads/4b8fcfd3-b526-4b15-8f68-399b04fb870c.png",
+      image: copperWaterBottle,
       description: "Complete set of 7 chakra-tuned singing bowls for deep meditation",
       rating: 5
     },
@@ -48,7 +48,7 @@ const Index = () => {
       name: "Golden Healing Bowl",
       price: "₹8,500",
       originalPrice: "₹10,000",
-      image: "/lovable-uploads/2b295614-5e8d-4fc2-b6bb-c0cc5da21207.png",
+      image: naturalPerfumes,
       description: "Premium brass singing bowl with rich harmonics",
       rating: 5
     },
@@ -57,7 +57,7 @@ const Index = () => {
       name: "Sacred Mantra Bowl",
       price: "₹6,500",
       originalPrice: "₹8,000",
-      image: "/lovable-uploads/020beefc-689d-42c9-b3ac-960b27771eac.png",
+      image: essentialOilsSet,
       description: "Hand-engraved bowl with sacred Sanskrit mantras",
       rating: 4
     },
@@ -66,45 +66,79 @@ const Index = () => {
       name: "Meditation Frame Drum",
       price: "₹4,500",
       originalPrice: "₹5,500",
-      image: "/lovable-uploads/6d7dd870-772e-4eb6-9760-f899167cc391.png",
+      image: spiritualIncense,
       description: "Natural hide drum for rhythmic meditation",
       rating: 5
-    },
+    }
+  ];
+
+  const yogaProducts = [
     {
-      id: 5,
-      name: "Om Sacred Drum",
-      price: "₹4,500",
-      originalPrice: "₹6,000",
-      image: "/lovable-uploads/aedf52bd-5343-4dd1-8358-32385b90ceda.png",
-      description: "Beautifully decorated drum with Om symbol (6-inch)",
-      rating: 5
-    },
-    {
-      id: 6,
-      name: "Meditation Chimes Set",
+      id: 1,
+      name: "Cork Yoga Mat",
       price: "₹3,500",
-      originalPrice: "₹4,200",
-      image: "/lovable-uploads/e40369e2-28b1-4440-a2dd-8ffd000d9606.png",
-      description: "Crystal-clear chimes for space clearing",
-      rating: 4
+      originalPrice: "₹4,500",
+      image: corkYogaMat,
+      description: "Eco-friendly cork yoga mat with superior grip"
     },
     {
-      id: 7,
-      name: "Healing Harmonium",
-      price: "₹25,000",
-      originalPrice: "₹30,000",
-      image: "/lovable-uploads/61ad40c8-bbac-47a3-ba41-f7ef2ad2ca68.png",
-      description: "Professional harmonium for chanting and healing",
-      rating: 5
+      id: 2,
+      name: "Yoga Blocks Set",
+      price: "₹1,200",
+      originalPrice: "₹1,600",
+      image: yogaBlocks,
+      description: "Premium foam blocks for perfect alignment"
     },
     {
-      id: 8,
-      name: "Sacred Kalimba",
-      price: "₹2,500",
-      originalPrice: "₹3,000",
-      image: "/lovable-uploads/edd5c3f6-868f-4040-bf2c-94a190f27462.png",
-      description: "Thumb piano for gentle meditation music",
-      rating: 4
+      id: 3,
+      name: "Yoga Belt",
+      price: "₹450",
+      originalPrice: "₹600",
+      image: yogaBelt,
+      description: "Durable cotton belt for assisted stretching"
+    },
+    {
+      id: 4,
+      name: "Jalneti Pot",
+      price: "₹350",
+      originalPrice: "₹500",
+      image: jalnetiPot,
+      description: "Traditional copper pot for nasal cleansing"
+    }
+  ];
+
+  const wellnessProducts = [
+    {
+      id: 1,
+      name: "Natural Perfumes",
+      price: "₹1,800",
+      originalPrice: "₹2,200",
+      image: naturalPerfumes,
+      description: "Handcrafted essential oil perfumes"
+    },
+    {
+      id: 2,
+      name: "Essential Oils Set",
+      price: "₹3,200",
+      originalPrice: "₹4,000",
+      image: essentialOilsSet,
+      description: "Pure therapeutic grade essential oils"
+    },
+    {
+      id: 3,
+      name: "Spiritual Incense",
+      price: "₹480",
+      originalPrice: "₹650",
+      image: spiritualIncense,
+      description: "Sacred incense sticks for meditation"
+    },
+    {
+      id: 4,
+      name: "Copper Water Bottle",
+      price: "₹1,250",
+      originalPrice: "₹1,600",
+      image: copperWaterBottle,
+      description: "Ayurvedic copper vessel for health"
     }
   ];
 
@@ -166,74 +200,176 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="hero-section" style={{
-        backgroundImage: `linear-gradient(135deg, rgba(232, 244, 253, 0.8) 0%, rgba(255, 248, 220, 0.6) 50%, rgba(209, 236, 241, 0.8) 100%), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E8F4FD' fill-opacity='0.15'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3Ccircle cx='80' cy='30' r='4'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='40' cy='60' r='3'/%3E%3Ccircle cx='70' cy='70' r='2'/%3E%3Ccircle cx='30' cy='80' r='3'/%3E%3Ccircle cx='90' cy='90' r='2'/%3E%3Cpath d='M15 45 Q25 35 35 45 T55 45' stroke='%23D1ECF1' stroke-width='2' fill='none' stroke-opacity='0.3'/%3E%3Cpath d='M65 25 Q75 15 85 25 T105 25' stroke='%23E8F4FD' stroke-width='1.5' fill='none' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E")`,
-        backgroundSize: 'cover, 120px 120px',
-        backgroundPosition: 'center, 0 0',
-        backgroundRepeat: 'no-repeat, repeat'
-      }}>
-        <div className="container">
-          <div className="row align-items-center min-vh-100">
-            <div className="col-lg-10 mx-auto text-center">
-              <div className="hero-content">
-                <h1 className="display-2 font-heading fw-bold mb-4 floating" style={{ 
-                  color: '#1A2B42',
-                  fontSize: '4.5rem',
-                  lineHeight: '1.1'
-                }}>
-                  {heroSlides[currentSlide].title}
-                </h1>
-                <h2 className="fs-1 font-accent mb-4 glow" style={{ 
-                  color: '#1A2B42',
-                  fontSize: '2.5rem',
-                  fontWeight: '300',
-                  opacity: '0.8'
-                }}>
-                  {heroSlides[currentSlide].subtitle}
-                </h2>
-                <p className="fs-4 mb-5" style={{ 
-                  color: '#1A2B42',
-                  opacity: '0.7',
-                  maxWidth: '600px',
-                  margin: '0 auto 3rem',
-                  lineHeight: '1.6'
-                }}>
-                  {heroSlides[currentSlide].description}
-                </p>
-                <div className="d-flex gap-4 justify-content-center flex-wrap">
-                  <a href="#products" className="btn btn-primary btn-lg">
-                    <span>✨ Explore Sacred Tools</span>
-                  </a>
-                  <a href="/healing-services" className="btn btn-outline-primary btn-lg">
-                    <span>🎵 Sound Healing</span>
-                  </a>
+      {/* Hero Carousel Section */}
+      <div className="container-fluid p-0" id="home">
+        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div className="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div 
+                className="position-relative"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, rgba(139, 69, 19, 0.7), rgba(255, 215, 0, 0.5)), url(${heroAyurvedaSpa})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '100vh',
+                  backgroundAttachment: 'fixed'
+                }}
+              >
+                <div className="position-absolute top-0 start-0 w-100 h-100" style={{background: 'linear-gradient(45deg, rgba(139, 69, 19, 0.4), rgba(218, 165, 32, 0.3))'}}></div>
+                <div className="container position-relative" style={{paddingTop: '150px', paddingBottom: '100px', minHeight: '100vh', display: 'flex', alignItems: 'center'}}>
+                  <div className="row align-items-center h-100">
+                    <div className="col-lg-6">
+                      <div className="text-white">
+                        <h1 className="display-4 fw-bold mb-4" style={{fontFamily: '"Playfair Display", serif', textShadow: '2px 2px 4px rgba(0,0,0,0.7)', lineHeight: '1.2'}}>
+                          Ancient Ayurvedic Healing in Sacred Rishikesh
+                        </h1>
+                        <p className="lead mb-4" style={{fontSize: '1.3rem', textShadow: '1px 1px 2px rgba(0,0,0,0.7)', lineHeight: '1.6'}}>
+                          Experience transformative healing through traditional Panchakarma treatments, authentic Ayurvedic therapies, and spiritual wellness practices in the yoga capital of the world.
+                        </p>
+                        <div className="d-flex flex-wrap gap-3">
+                          <a href="#products" className="btn btn-warning btn-lg px-4 py-3 rounded-pill" style={{boxShadow: '0 4px 15px rgba(255, 193, 7, 0.4)', border: 'none', fontSize: '1.1rem', fontWeight: '600'}}>
+                            Explore Treatments
+                          </a>
+                          <a href="/about" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill" style={{borderWidth: '2px', fontSize: '1.1rem', fontWeight: '600'}}>
+                            Our Journey
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="text-center">
+                        <div className="position-relative d-inline-block">
+                          <div className="rounded-circle" style={{
+                            width: '300px',
+                            height: '300px',
+                            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 215, 0, 0.25))',
+                            backdropFilter: 'blur(10px)',
+                            border: '2px solid rgba(255, 255, 255, 0.3)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
+                          }}>
+                            <span style={{fontSize: '100px', textShadow: '0 0 20px rgba(255, 215, 0, 0.7)'}}>🕉️</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                {/* Slide Indicators */}
-                <div className="d-flex justify-content-center mt-5 gap-2">
-                  {heroSlides.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`rounded-circle ${index === currentSlide ? 'bg-primary' : 'bg-light'}`}
-                      style={{ 
-                        width: '12px', 
-                        height: '12px',
-                        opacity: index === currentSlide ? '1' : '0.3',
-                        backgroundColor: index === currentSlide ? '#F8FBFF' : '#E8EDF5',
-                        transition: 'all 0.3s ease',
-                        cursor: 'pointer',
-                        border: '1px solid #E8EDF5'
-                      }}
-                      onClick={() => setCurrentSlide(index)}
-                    />
-                  ))}
+              </div>
+            </div>
+            
+            <div className="carousel-item">
+              <div 
+                className="position-relative"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, rgba(25, 135, 84, 0.7), rgba(40, 167, 69, 0.5)), url(${heroMeditationRishikesh})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '100vh',
+                  backgroundAttachment: 'fixed'
+                }}
+              >
+                <div className="position-absolute top-0 start-0 w-100 h-100" style={{background: 'linear-gradient(45deg, rgba(25, 135, 84, 0.4), rgba(40, 167, 69, 0.3))'}}></div>
+                <div className="container position-relative" style={{paddingTop: '150px', paddingBottom: '100px', minHeight: '100vh', display: 'flex', alignItems: 'center'}}>
+                  <div className="row align-items-center h-100">
+                    <div className="col-lg-6 order-lg-2">
+                      <div className="text-white">
+                        <h1 className="display-4 fw-bold mb-4" style={{fontFamily: '"Playfair Display", serif', textShadow: '2px 2px 4px rgba(0,0,0,0.7)', lineHeight: '1.2'}}>
+                          Sacred Sound Healing & Meditation
+                        </h1>
+                        <p className="lead mb-4" style={{fontSize: '1.3rem', textShadow: '1px 1px 2px rgba(0,0,0,0.7)', lineHeight: '1.6'}}>
+                          Discover the transformative power of Tibetan singing bowls, crystal healing, and meditation practices by the sacred Ganges river in the spiritual heart of the Himalayas.
+                        </p>
+                        <div className="d-flex flex-wrap gap-3">
+                          <a href="#gallery" className="btn btn-success btn-lg px-4 py-3 rounded-pill" style={{boxShadow: '0 4px 15px rgba(40, 167, 69, 0.4)', border: 'none', fontSize: '1.1rem', fontWeight: '600'}}>
+                            View Gallery
+                          </a>
+                          <a href="#healing" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill" style={{borderWidth: '2px', fontSize: '1.1rem', fontWeight: '600'}}>
+                            Sound Healing
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 order-lg-1">
+                      <div className="text-center">
+                        <div className="position-relative d-inline-block">
+                          <div className="rounded-circle" style={{
+                            width: '300px',
+                            height: '300px',
+                            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(40, 167, 69, 0.25))',
+                            backdropFilter: 'blur(10px)',
+                            border: '2px solid rgba(255, 255, 255, 0.3)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
+                          }}>
+                            <span style={{fontSize: '100px', textShadow: '0 0 20px rgba(40, 167, 69, 0.7)'}}>🧘‍♀️</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="carousel-item">
+              <div 
+                className="position-relative"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, rgba(102, 16, 242, 0.7), rgba(149, 76, 233, 0.5)), url(${heroAyurvedicHealing})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  minHeight: '100vh',
+                  backgroundAttachment: 'fixed'
+                }}
+              >
+                <div className="position-absolute top-0 start-0 w-100 h-100" style={{background: 'linear-gradient(45deg, rgba(102, 16, 242, 0.4), rgba(149, 76, 233, 0.3))'}}></div>
+                <div className="container position-relative" style={{paddingTop: '150px', paddingBottom: '100px', minHeight: '100vh', display: 'flex', alignItems: 'center'}}>
+                  <div className="row align-items-center h-100">
+                    <div className="col-lg-12 text-center">
+                      <div className="text-white">
+                        <h1 className="display-3 fw-bold mb-4" style={{fontFamily: '"Playfair Display", serif', textShadow: '2px 2px 4px rgba(0,0,0,0.7)', lineHeight: '1.2'}}>
+                          Transform Your Life Through Ancient Wisdom
+                        </h1>
+                        <p className="lead mb-5" style={{fontSize: '1.4rem', textShadow: '1px 1px 2px rgba(0,0,0,0.7)', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto'}}>
+                          Join thousands who have discovered inner peace, physical healing, and spiritual awakening through our authentic Ayurvedic treatments and yoga practices in the sacred land of Rishikesh.
+                        </p>
+                        <div className="d-flex flex-wrap gap-3 justify-content-center">
+                          <a href="#gallery" className="btn btn-primary btn-lg px-5 py-3 rounded-pill" style={{background: 'linear-gradient(45deg, #6610f2, #954ce9)', border: 'none', boxShadow: '0 4px 15px rgba(102, 16, 242, 0.4)', fontSize: '1.1rem', fontWeight: '600'}}>
+                            Begin Your Journey
+                          </a>
+                          <a href="/healing-services" className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill" style={{borderWidth: '2px', fontSize: '1.1rem', fontWeight: '600'}}>
+                            Book Consultation
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          
+          <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Products Section */}
       <section id="products" className="py-5" style={{ 
@@ -241,1293 +377,623 @@ const Index = () => {
         position: 'relative'
       }}>
         <div className="container">
-          <div className="row mb-5">
-            <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#1A2B42' }}>
-                ✨ Sacred Wellness Tools
-              </h2>
-              <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.6', maxWidth: '600px', margin: '0 auto' }}>
-                Handcrafted instruments that carry the ancient wisdom of sound healing and meditation practice
-              </p>
-              <div style={{ 
-                width: '100px', 
-                height: '2px', 
-                background: 'linear-gradient(135deg, #F8FBFF, #F0F7FF)',
-                margin: '2rem auto',
-                borderRadius: '2px'
-              }}></div>
-            </div>
+          <div className="text-center mb-5">
+            <h2 className="display-4 fw-bold mb-3" style={{ 
+              color: 'var(--primary)',
+              fontFamily: '"Playfair Display", serif'
+            }}>
+              Sacred Wellness Collection
+            </h2>
+            <p className="lead" style={{ color: 'var(--text-secondary)' }}>
+              Discover authentic healing instruments and wellness products from the Himalayas
+            </p>
           </div>
-          
-          <div className="row g-4">
-            {products.map((product, index) => (
-              <div key={product.id} className="col-lg-3 col-md-6">
-                <div className="card product-card h-100" style={{ 
-                  animationDelay: `${index * 0.1}s`,
-                  animation: 'fadeInUp 0.8s ease-out both'
-                }}>
-                  <div className="position-relative">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="product-image"
-                      style={{ position: 'relative', zIndex: '2' }}
-                    />
-                    <div className="position-absolute top-0 end-0 m-3" style={{ zIndex: '3' }}>
-                      <span className="badge" style={{ 
-                        background: 'rgba(255, 255, 255, 0.9)',
-                        color: '#1A2B42',
-                        borderRadius: '15px',
-                        padding: '6px 12px',
-                        fontSize: '0.75rem',
-                        border: '1px solid #E8EDF5',
-                        backdropFilter: 'blur(10px)'
-                      }}>✨ Authentic</span>
-                    </div>
-                  </div>
-                  <div className="card-body d-flex flex-column" style={{ position: 'relative', zIndex: '2' }}>
-                    <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>{product.name}</h5>
-                    <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>{product.description}</p>
-                    <div className="mb-3">
-                      <div className="d-flex align-items-center mb-2">
-                        {renderStars(product.rating)}
-                        <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>({product.rating}/5)</small>
+
+          {/* Sacred Sound Healing Instruments */}
+          <div className="mb-5">
+            <h3 className="h2 fw-bold mb-4 text-center" style={{ color: 'var(--primary)' }}>
+              🎵 Sacred Sound Healing Instruments
+            </h3>
+            <div className="row g-4">
+              {musicProducts.map((product, index) => (
+                <div key={product.id} className="col-lg-3 col-md-6">
+                  <div 
+                    className="card h-100 border-0 hover-scale" 
+                    style={{
+                      background: 'var(--gradient-card)',
+                      borderRadius: '20px',
+                      overflow: 'hidden',
+                      boxShadow: 'var(--shadow-elegant)',
+                      transition: 'var(--transition-smooth)'
+                    }}
+                  >
+                    <div className="position-relative">
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        style={{
+                          width: '100%',
+                          height: '250px',
+                          objectFit: 'cover'
+                        }}
+                      />
+                      <div className="position-absolute top-3 end-3">
+                        <span className="badge" style={{
+                          background: 'var(--gradient-warm)',
+                          fontSize: '0.9rem',
+                          padding: '8px 12px',
+                          borderRadius: '20px'
+                        }}>
+                          {renderStars(product.rating)}
+                        </span>
                       </div>
-                      <div className="d-flex justify-content-between align-items-center">
+                      <div className="position-absolute top-3 start-3">
+                        <span className="badge bg-success" style={{
+                          fontSize: '0.8rem',
+                          padding: '6px 10px',
+                          borderRadius: '15px'
+                        }}>
+                          AUTHENTIC
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="card-body p-4">
+                      <h5 className="fw-bold mb-2" style={{ color: 'var(--primary-text)' }}>
+                        {product.name}
+                      </h5>
+                      <p className="small mb-3" style={{ color: 'var(--secondary-text)' }}>
+                        {product.description}
+                      </p>
+                      
+                      <div className="d-flex align-items-center justify-content-between mb-3">
                         <div>
-                          <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>{product.price}</span>
-                          <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>
+                          <span className="h5 fw-bold me-2" style={{ color: 'var(--accent)' }}>
+                            {product.price}
+                          </span>
+                          <small className="text-decoration-line-through" style={{ color: 'var(--text-muted)' }}>
                             {product.originalPrice}
                           </small>
                         </div>
+                        <span className="badge bg-warning text-dark px-3 py-2 rounded-pill">
+                          SALE
+                        </span>
                       </div>
-                    </div>
-                    <div className="d-flex gap-2 flex-column flex-sm-row">
-                      <button className="btn btn-outline-primary btn-sm" style={{
-                        fontSize: '0.8rem',
-                        padding: '6px 12px',
-                        borderRadius: '8px',
-                        transition: 'all 0.2s ease'
-                      }}>
-                        <span>📖 Details</span>
-                      </button>
-                      <button className="btn btn-primary btn-sm" style={{
-                        fontSize: '0.8rem',
-                        padding: '6px 12px',
-                        borderRadius: '8px',
-                        transition: 'all 0.2s ease'
-                      }}>
-                        <span>💳 Buy Now</span>
-                      </button>
+                      
+                      <div className="d-flex gap-2">
+                        <button className="btn flex-fill" style={{
+                          background: 'var(--gradient-primary)',
+                          border: 'none',
+                          color: 'white',
+                          borderRadius: '15px',
+                          fontWeight: '600',
+                          padding: '12px',
+                          boxShadow: 'var(--shadow-primary)'
+                        }}>
+                          Add to Cart
+                        </button>
+                        <button className="btn btn-outline-primary" style={{
+                          borderRadius: '15px',
+                          padding: '12px 16px',
+                          border: '2px solid var(--primary)'
+                        }}>
+                          ❤️
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Premium Yoga Accessories */}
+          <div className="mb-5">
+            <h3 className="h2 fw-bold mb-4 text-center" style={{ color: 'var(--primary)' }}>
+              🧘‍♀️ Premium Yoga & Wellness Accessories
+            </h3>
+            <div className="row g-4">
+              {yogaProducts.map((product, index) => (
+                <div key={product.id} className="col-lg-3 col-md-6">
+                  <div 
+                    className="card h-100 border-0 hover-scale" 
+                    style={{
+                      background: 'var(--gradient-card)',
+                      borderRadius: '20px',
+                      overflow: 'hidden',
+                      boxShadow: 'var(--shadow-elegant)',
+                      transition: 'var(--transition-smooth)'
+                    }}
+                  >
+                    <div className="position-relative">
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        style={{
+                          width: '100%',
+                          height: '250px',
+                          objectFit: 'cover'
+                        }}
+                      />
+                      <div className="position-absolute top-3 start-3">
+                        <span className="badge bg-info" style={{
+                          fontSize: '0.8rem',
+                          padding: '6px 10px',
+                          borderRadius: '15px'
+                        }}>
+                          ECO-FRIENDLY
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="card-body p-4">
+                      <h5 className="fw-bold mb-2" style={{ color: 'var(--primary-text)' }}>
+                        {product.name}
+                      </h5>
+                      <p className="small mb-3" style={{ color: 'var(--secondary-text)' }}>
+                        {product.description}
+                      </p>
+                      
+                      <div className="d-flex align-items-center justify-content-between mb-3">
+                        <div>
+                          <span className="h5 fw-bold me-2" style={{ color: 'var(--accent)' }}>
+                            {product.price}
+                          </span>
+                          <small className="text-decoration-line-through" style={{ color: 'var(--text-muted)' }}>
+                            {product.originalPrice}
+                          </small>
+                        </div>
+                        <span className="badge bg-success text-white px-3 py-2 rounded-pill">
+                          25% OFF
+                        </span>
+                      </div>
+                      
+                      <div className="d-flex gap-2">
+                        <button className="btn flex-fill" style={{
+                          background: 'var(--gradient-secondary)',
+                          border: 'none',
+                          color: 'white',
+                          borderRadius: '15px',
+                          fontWeight: '600',
+                          padding: '12px',
+                          boxShadow: 'var(--shadow-secondary)'
+                        }}>
+                          Add to Cart
+                        </button>
+                        <button className="btn btn-outline-secondary" style={{
+                          borderRadius: '15px',
+                          padding: '12px 16px',
+                          border: '2px solid var(--secondary)'
+                        }}>
+                          ❤️
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Ayurvedic Wellness Products */}
+          <div className="mb-5">
+            <h3 className="h2 fw-bold mb-4 text-center" style={{ color: 'var(--primary)' }}>
+              🌿 Authentic Ayurvedic Wellness Products
+            </h3>
+            <div className="row g-4">
+              {wellnessProducts.map((product, index) => (
+                <div key={product.id} className="col-lg-3 col-md-6">
+                  <div 
+                    className="card h-100 border-0 hover-scale" 
+                    style={{
+                      background: 'var(--gradient-card)',
+                      borderRadius: '20px',
+                      overflow: 'hidden',
+                      boxShadow: 'var(--shadow-elegant)',
+                      transition: 'var(--transition-smooth)'
+                    }}
+                  >
+                    <div className="position-relative">
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        style={{
+                          width: '100%',
+                          height: '250px',
+                          objectFit: 'cover'
+                        }}
+                      />
+                      <div className="position-absolute top-3 start-3">
+                        <span className="badge bg-warning text-dark" style={{
+                          fontSize: '0.8rem',
+                          padding: '6px 10px',
+                          borderRadius: '15px'
+                        }}>
+                          PURE & NATURAL
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="card-body p-4">
+                      <h5 className="fw-bold mb-2" style={{ color: 'var(--primary-text)' }}>
+                        {product.name}
+                      </h5>
+                      <p className="small mb-3" style={{ color: 'var(--secondary-text)' }}>
+                        {product.description}
+                      </p>
+                      
+                      <div className="d-flex align-items-center justify-content-between mb-3">
+                        <div>
+                          <span className="h5 fw-bold me-2" style={{ color: 'var(--accent)' }}>
+                            {product.price}
+                          </span>
+                          <small className="text-decoration-line-through" style={{ color: 'var(--text-muted)' }}>
+                            {product.originalPrice}
+                          </small>
+                        </div>
+                        <span className="badge bg-primary text-white px-3 py-2 rounded-pill">
+                          LIMITED
+                        </span>
+                      </div>
+                      
+                      <div className="d-flex gap-2">
+                        <button className="btn flex-fill" style={{
+                          background: 'var(--gradient-warm)',
+                          border: 'none',
+                          color: 'white',
+                          borderRadius: '15px',
+                          fontWeight: '600',
+                          padding: '12px',
+                          boxShadow: 'var(--shadow-warm)'
+                        }}>
+                          Add to Cart
+                        </button>
+                        <button className="btn btn-outline-warning" style={{
+                          borderRadius: '15px',
+                          padding: '12px 16px',
+                          border: '2px solid var(--warning)'
+                        }}>
+                          ❤️
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a href="#gallery" className="btn btn-primary btn-lg px-5 py-3 rounded-pill" style={{
+              background: 'var(--gradient-primary)',
+              border: 'none',
+              boxShadow: 'var(--shadow-elegant)',
+              fontSize: '1.1rem',
+              fontWeight: '600'
+            }}>
+              View Full Collection
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Yoga Accessories Section */}
-      <section id="yoga-accessories" className="py-5" style={{ 
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 247, 255, 0.5) 100%)',
-        position: 'relative'
+      {/* Gallery Section */}
+      <section id="gallery" className="py-5" style={{
+        background: 'linear-gradient(135deg, var(--background-primary), var(--background-secondary))'
       }}>
         <div className="container">
-          <div className="row mb-5">
-            <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#1A2B42' }}>
-                🧘‍♀️ Yoga Accessories
-              </h2>
-              <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.6', maxWidth: '700px', margin: '0 auto' }}>
-                Enhance your yoga practice with our premium collection of eco-friendly accessories. Each item is thoughtfully selected to support your journey towards physical wellness and spiritual growth.
-              </p>
-              <div style={{ 
-                width: '100px', 
-                height: '2px', 
-                background: 'linear-gradient(135deg, #F8FBFF, #F0F7FF)',
-                margin: '2rem auto',
-                borderRadius: '2px'
-              }}></div>
-            </div>
+          <div className="text-center mb-5">
+            <h2 className="display-4 fw-bold mb-3" style={{
+              color: 'var(--primary)',
+              fontFamily: '"Playfair Display", serif'
+            }}>
+              Sacred Healing Gallery
+            </h2>
+            <p className="lead" style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+              Explore our authentic collection of sacred healing instruments, Ayurvedic products, and spiritual wellness tools from the sacred lands of Rishikesh
+            </p>
           </div>
-          
+
           <div className="row g-4">
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animation: 'fadeInUp 0.8s ease-out both'
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
               }}>
-                <div className="position-relative">
-                  <img 
-                    src={corkYogaMat} 
-                    alt="Cork Yoga Mat" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3" style={{ zIndex: '3' }}>
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem',
-                      border: '1px solid #E8EDF5'
-                    }}>🌱 Eco-Friendly</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Cork Yoga Mat</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Natural cork surface with excellent grip and antimicrobial properties</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★★</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹3,500</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹4,200</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animationDelay: '0.1s',
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={yogaBlocks} 
-                    alt="Yoga Blocks Set" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>✨ Premium</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Yoga Blocks (Set of 2)</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>High-density EVA foam blocks for perfect alignment and support</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★★</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹1,200</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹1,500</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animationDelay: '0.2s',
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={yogaBelt} 
-                    alt="Yoga Belt" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>🔄 Adjustable</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Yoga Belt</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Durable cotton strap with adjustable buckle for deeper stretches</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★☆</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(4/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹800</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹1,000</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animationDelay: '0.3s',
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={jalnetiPot} 
-                    alt="Jalneti Pot" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>🧼 Cleansing</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Jalneti Pot</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Traditional ceramic neti pot for nasal cleansing and respiratory health</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★★</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹600</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹750</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Natural Products Section */}
-      <section id="natural-products" className="py-5" style={{ 
-        background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.3) 0%, rgba(255, 248, 220, 0.4) 50%, rgba(209, 236, 241, 0.3) 100%)',
-        position: 'relative'
-      }}>
-        <div className="container">
-          <div className="row mb-5">
-            <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold mb-3 fade-in-up" style={{ color: '#1A2B42' }}>
-                🌿 Natural Products
-              </h2>
-              <p className="fs-5 mb-4" style={{ color: '#1A2B42', opacity: '0.6', maxWidth: '700px', margin: '0 auto' }}>
-                Experience the pure essence of nature with our collection of alcohol-free perfumes, therapeutic essential oils, handcrafted incense sticks infused with spiritual energy, and traditional Ayurvedic copper vessels for holistic wellness.
-              </p>
-              <div style={{ 
-                width: '100px', 
-                height: '2px', 
-                background: 'linear-gradient(135deg, #F8FBFF, #F0F7FF)',
-                margin: '2rem auto',
-                borderRadius: '2px'
-              }}></div>
-            </div>
-          </div>
-          
-          <div className="row g-4">
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={naturalPerfumes} 
-                    alt="Natural Perfumes" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>🚫 Alcohol-Free</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Natural Perfumes</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Alcohol-free floral and herbal perfumes crafted from pure essential oils</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★★</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹1,800</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹2,200</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animationDelay: '0.1s',
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={essentialOilsSet} 
-                    alt="Essential Oils Set" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>🌿 Pure</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Essential Oils Set</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Premium therapeutic grade essential oils for aromatherapy and healing</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★★</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹2,500</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹3,000</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animationDelay: '0.2s',
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={spiritualIncense} 
-                    alt="Spiritual Incense Sticks" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>✋ Handmade</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Spiritual Incense Sticks</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Handcrafted essence sticks infused with spiritual energy for meditation</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★☆</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(4/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹450</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹600</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className="card product-card h-100" style={{ 
-                animationDelay: '0.3s',
-                animation: 'fadeInUp 0.8s ease-out both'
-              }}>
-                <div className="position-relative">
-                  <img 
-                    src={copperWaterBottle} 
-                    alt="Copper Water Bottle" 
-                    style={{
-                      width: '100%',
-                      height: '250px',
-                      objectFit: 'cover',
-                      borderRadius: '8px 8px 0 0'
-                    }} 
-                  />
-                  <div className="position-absolute top-0 end-0 m-3">
-                    <span className="badge" style={{ 
-                      background: 'rgba(255, 255, 255, 0.9)',
-                      color: '#1A2B42',
-                      borderRadius: '15px',
-                      padding: '6px 12px',
-                      fontSize: '0.75rem'
-                    }}>🕉️ Ayurvedic</span>
-                  </div>
-                </div>
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title font-heading fw-bold" style={{ color: '#1A2B42' }}>Copper Water Bottle</h5>
-                  <p className="card-text flex-grow-1" style={{ color: '#1A2B42', opacity: '0.6' }}>Traditional Ayurvedic copper vessel for storing and purifying water</p>
-                  <div className="mb-3">
-                    <div className="d-flex align-items-center mb-2">
-                      <span className="text-warning">★★★★★</span>
-                      <small className="ms-2" style={{ color: '#1A2B42', opacity: '0.5' }}>(5/5)</small>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <span className="fw-bold fs-5" style={{ color: '#1A2B42' }}>₹1,500</span>
-                        <small className="text-decoration-line-through ms-2" style={{ opacity: '0.4' }}>₹1,800</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="d-flex gap-2 flex-column flex-sm-row">
-                    <button className="btn btn-outline-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>📖 Details</button>
-                    <button className="btn btn-primary btn-sm" style={{
-                      fontSize: '0.8rem',
-                      padding: '6px 12px',
-                      borderRadius: '8px'
-                    }}>💳 Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sound Healing Feature Section */}
-      <section id="healing" className="py-5" style={{ 
-        background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.4) 0%, rgba(255, 248, 220, 0.3) 50%, rgba(209, 236, 241, 0.4) 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        {/* Background Elements */}
-        <div style={{
-          position: 'absolute',
-          top: '10%',
-          left: '5%',
-          width: '200px',
-          height: '200px',
-          background: 'radial-gradient(circle, rgba(232, 244, 253, 0.3) 0%, transparent 70%)',
-          borderRadius: '50%',
-          animation: 'float 8s ease-in-out infinite'
-        }}></div>
-        <div style={{
-          position: 'absolute',
-          bottom: '15%',
-          right: '10%',
-          width: '150px',
-          height: '150px',
-          background: 'radial-gradient(circle, rgba(209, 236, 241, 0.3) 0%, transparent 70%)',
-          borderRadius: '50%',
-          animation: 'float 6s ease-in-out infinite reverse'
-        }}></div>
-
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 fade-in-left">
-              <div className="position-relative">
                 <img 
-                  src="/src/assets/sound-healing.jpg" 
-                  alt="Sound Healing Session"
-                  className="img-fluid shadow-lg"
+                  src={heroAyurvedaSpa} 
+                  alt="Sacred Tibetan Singing Bowls Collection"
+                  className="w-100 h-100"
                   style={{ 
-                    borderRadius: '30px',
-                    transform: 'perspective(1000px) rotateY(-5deg)',
+                    objectFit: 'cover',
                     transition: 'transform 0.3s ease'
                   }}
                 />
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  left: '20px',
-                  background: 'rgba(255, 255, 255, 0.9)',
-                  borderRadius: '20px',
-                  padding: '15px 20px',
-                  backdropFilter: 'blur(10px)'
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
                 }}>
-                  <div className="d-flex align-items-center">
-                    <span style={{ fontSize: '1.5rem', marginRight: '10px' }}>🎵</span>
-                    <div>
-                      <div style={{ fontWeight: '600', color: '#2C3E50', fontSize: '0.9rem' }}>Sacred Vibrations</div>
-                      <div style={{ color: '#2C3E50', opacity: '0.7', fontSize: '0.8rem' }}>Healing Frequencies</div>
-                    </div>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Ayurvedic Spa & Healing Center</h5>
+                    <p className="mb-0 small">Sacred healing space with traditional Ayurvedic setup</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 fade-in-right">
-              <div className="ps-lg-5">
-                <h2 className="display-4 font-heading fw-bold mb-4" style={{ color: '#2C3E50' }}>
-                  🎶 Sacred Sound Healing Journey
-                </h2>
-                <p className="fs-5 mb-4" style={{ color: '#2C3E50', opacity: '0.8', lineHeight: '1.6' }}>
-                  Immerse yourself in the profound healing power of ancient sound vibrations. Our carefully crafted 
-                  instruments create therapeutic resonances that gently restore harmony to your mind, body, and spirit.
-                </p>
-                
-                <div className="row g-4 mb-5">
-                  <div className="col-6">
-                    <div className="d-flex align-items-start">
-                      <div style={{ 
-                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                        borderRadius: '15px',
-                        padding: '15px',
-                        marginRight: '15px',
-                        fontSize: '1.5rem'
-                      }}>🧘‍♀️</div>
-                      <div>
-                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Deep Meditation</h6>
-                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Inner stillness</small>
-                      </div>
-                    </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src={heroMeditationRishikesh} 
+                  alt="Meditation by Ganges River in Rishikesh"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Sacred Rishikesh Meditation</h5>
+                    <p className="mb-0 small">Peaceful meditation by the holy Ganges river</p>
                   </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-start">
-                      <div style={{ 
-                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                        borderRadius: '15px',
-                        padding: '15px',
-                        marginRight: '15px',
-                        fontSize: '1.5rem'
-                      }}>💆‍♀️</div>
-                      <div>
-                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Stress Relief</h6>
-                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Complete relaxation</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-start">
-                      <div style={{ 
-                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                        borderRadius: '15px',
-                        padding: '15px',
-                        marginRight: '15px',
-                        fontSize: '1.5rem'
-                      }}>⚡</div>
-                      <div>
-                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Energy Healing</h6>
-                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Vitality restoration</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-start">
-                      <div style={{ 
-                        background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                        borderRadius: '15px',
-                        padding: '15px',
-                        marginRight: '15px',
-                        fontSize: '1.5rem'
-                      }}>🌟</div>
-                      <div>
-                        <h6 className="fw-bold mb-1" style={{ color: '#2C3E50' }}>Chakra Balance</h6>
-                        <small style={{ color: '#2C3E50', opacity: '0.7' }}>Energy alignment</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="d-flex gap-3 flex-wrap">
-                  <a href="/healing-services" className="btn btn-primary btn-lg">
-                    <span>🎵 Book Sound Session</span>
-                  </a>
-                  <a href="#products" className="btn btn-outline-primary">
-                    <span>✨ Explore Instruments</span>
-                  </a>
                 </div>
               </div>
             </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src={heroAyurvedicHealing} 
+                  alt="Traditional Ayurvedic Healing Session"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Ayurvedic Healing Therapy</h5>
+                    <p className="mb-0 small">Traditional healing with herbal oils and sacred instruments</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src={corkYogaMat} 
+                  alt="Premium Yoga Equipment Collection"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Yoga Equipment Collection</h5>
+                    <p className="mb-0 small">Premium eco-friendly yoga accessories and tools</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src={naturalPerfumes} 
+                  alt="Natural Essential Oils and Perfumes"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Ayurvedic Aromatherapy</h5>
+                    <p className="mb-0 small">Pure essential oils and natural perfumes for healing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src={copperWaterBottle} 
+                  alt="Traditional Copper Healing Vessels"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Sacred Copper Vessels</h5>
+                    <p className="mb-0 small">Traditional copper instruments for Ayurvedic water therapy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-5">
+            <a href="/about" className="btn btn-primary btn-lg px-5 py-3 rounded-pill" style={{
+              background: 'var(--gradient-primary)',
+              border: 'none',
+              boxShadow: 'var(--shadow-elegant)',
+              fontSize: '1.1rem',
+              fontWeight: '600'
+            }}>
+              Visit Our Sacred Space
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-5" style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
-        <div className="container">
-          <div className="row mb-5">
-            <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold text-primary mb-3">
-                🌿 Healing Services
-              </h2>
-              <p className="fs-5 text-muted">
-                Ancient wisdom meets modern wellness in our comprehensive healing programs
-              </p>
-            </div>
-          </div>
-          
-          <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <div className="service-card">
-                <div className="mb-4">
-                  <img src="/src/assets/panchakarma-rishikesh.jpg" alt="Panchakarma" className="img-fluid rounded-3 mb-3" style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
-                </div>
-                <h4 className="font-heading fw-bold text-primary mb-3">🌿 Panchakarma Detox</h4>
-                <p className="mb-4">Complete Ayurvedic detoxification and rejuvenation program for mind, body, and spirit.</p>
-                <div className="price-tag mb-3">From ₹15,000</div>
-                <a href="/healing-services" className="btn btn-outline-primary">Learn More</a>
-              </div>
-            </div>
-            
-            <div className="col-lg-4 col-md-6">
-              <div className="service-card">
-                <div className="mb-4">
-                  <img src="/src/assets/abhyanga-rishikesh.jpg" alt="Abhyanga" className="img-fluid rounded-3 mb-3" style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
-                </div>
-                <h4 className="font-heading fw-bold text-primary mb-3">💆‍♀️ Abhyanga Massage</h4>
-                <p className="mb-4">Traditional full-body oil massage using warm herbal oils for deep relaxation.</p>
-                <div className="price-tag mb-3">From ₹3,500</div>
-                <a href="/healing-services" className="btn btn-outline-primary">Learn More</a>
-              </div>
-            </div>
-            
-            <div className="col-lg-4 col-md-6">
-              <div className="service-card">
-                <div className="mb-4">
-                  <img src="/src/assets/shirodhara-rishikesh.jpg" alt="Shirodhara" className="img-fluid rounded-3 mb-3" style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
-                </div>
-                <h4 className="font-heading fw-bold text-primary mb-3">🧘‍♀️ Shirodhara Therapy</h4>
-                <p className="mb-4">Continuous pouring of warm oil on the forehead for mental clarity and peace.</p>
-                <div className="price-tag mb-3">From ₹4,500</div>
-                <a href="/healing-services" className="btn btn-outline-primary">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Happy Clients Section */}
-      <section id="testimonials" className="py-5" style={{ 
-        background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.6) 0%, rgba(255, 248, 220, 0.4) 50%, rgba(209, 236, 241, 0.6) 100%)',
-        position: 'relative',
-        overflow: 'hidden'
+      {/* Sound Healing Section */}
+      <section id="healing" className="py-5" style={{
+        background: 'var(--gradient-primary)',
+        color: 'var(--light-text)'
       }}>
-        {/* Background Decorative Elements */}
-        <div style={{
-          position: 'absolute',
-          top: '10%',
-          right: '5%',
-          width: '180px',
-          height: '180px',
-          background: 'radial-gradient(circle, rgba(255, 248, 220, 0.4) 0%, transparent 70%)',
-          borderRadius: '50%',
-          animation: 'float 10s ease-in-out infinite'
-        }}></div>
-        <div style={{
-          position: 'absolute',
-          bottom: '10%',
-          left: '8%',
-          width: '120px',
-          height: '120px',
-          background: 'radial-gradient(circle, rgba(209, 236, 241, 0.3) 0%, transparent 70%)',
-          borderRadius: '50%',
-          animation: 'float 7s ease-in-out infinite reverse'
-        }}></div>
-
         <div className="container">
-          {/* Header Section */}
-          <div className="row mb-5">
-            <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold mb-4" style={{ 
-                color: '#1A2B42',
-                textShadow: '0 2px 4px rgba(26, 43, 66, 0.1)'
-              }}>
-                😊 Happy Clients Community
-              </h2>
-              <div className="row justify-content-center mb-4">
-                <div className="col-lg-8">
-                  <div className="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-3">
-                    <div className="text-center">
-                      <div style={{ 
-                        fontSize: '3rem', 
-                        fontWeight: 'bold',
-                        background: 'linear-gradient(135deg, #1A2B42, #4A90E2)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                      }}>3600+</div>
-                      <div style={{ color: '#1A2B42', fontWeight: '600' }}>Satisfied Clients</div>
-                    </div>
-                    <div style={{ width: '2px', height: '60px', background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)' }}></div>
-                    <div className="text-center">
-                      <div style={{ 
-                        fontSize: '3rem', 
-                        fontWeight: 'bold',
-                        background: 'linear-gradient(135deg, #1A2B42, #4A90E2)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                      }}>50+</div>
-                      <div style={{ color: '#1A2B42', fontWeight: '600' }}>Countries Served</div>
-                    </div>
-                    <div style={{ width: '2px', height: '60px', background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)' }}></div>
-                    <div className="text-center">
-                      <div style={{ 
-                        fontSize: '3rem', 
-                        fontWeight: 'bold',
-                        background: 'linear-gradient(135deg, #1A2B42, #4A90E2)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                      }}>98%</div>
-                      <div style={{ color: '#1A2B42', fontWeight: '600' }}>Success Rate</div>
-                    </div>
-                  </div>
-                  <p className="fs-5 mb-4" style={{ 
-                    color: '#1A2B42', 
-                    opacity: '0.7',
-                    lineHeight: '1.6'
-                  }}>
-                    Join thousands of individuals who have transformed their lives through our authentic Ayurvedic treatments, 
-                    sound healing therapies, and sacred wellness practices. From stress relief to spiritual awakening, 
-                    our clients experience profound healing in the heart of Rishikesh.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mb-5">
+            <h2 className="display-4 fw-bold mb-3" style={{
+              fontFamily: '"Playfair Display", serif'
+            }}>
+              Sacred Sound Healing Experience
+            </h2>
+            <p className="lead" style={{ maxWidth: '600px', margin: '0 auto' }}>
+              Transform your life through the ancient healing power of sound vibration and sacred instruments
+            </p>
           </div>
-          
-          {/* Client Cards Grid */}
-          <div className="row g-4">
-            {/* Row 1 */}
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <img src="/src/assets/testimonial-1.jpg" alt="Sarah" className="rounded-circle" style={{ 
-                      width: '80px', 
-                      height: '80px', 
-                      objectFit: 'cover',
-                      border: '3px solid #E8F4FD'
-                    }} />
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Sarah Johnson</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Yoga Teacher, California</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The sound healing session completely transformed my meditation practice. 
-                    The singing bowl creates the most beautiful vibrations."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #4CAF50, #66BB6A)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>✓ Verified Purchase</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <img src="/src/assets/testimonial-2.jpg" alt="Michael" className="rounded-circle" style={{ 
-                      width: '80px', 
-                      height: '80px', 
-                      objectFit: 'cover',
-                      border: '3px solid #E8F4FD'
-                    }} />
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Michael Chen</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Meditation Practitioner, Singapore</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "After years of chronic stress, the Panchakarma treatment gave me 
-                    a new lease on life. Truly life-changing experience."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #2196F3, #42A5F5)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🌟 Verified Treatment</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <img src="/src/assets/testimonial-3.jpg" alt="Priya" className="rounded-circle" style={{ 
-                      width: '80px', 
-                      height: '80px', 
-                      objectFit: 'cover',
-                      border: '3px solid #E8F4FD'
-                    }} />
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Priya Sharma</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Wellness Coach, Mumbai</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The authentic instruments and genuine healing approach make this place special. 
-                    I've recommended it to all my clients."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #FF9800, #FFB74D)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🔄 Return Customer</div>
-                </div>
-              </div>
-            </div>
 
-            {/* Row 2 */}
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
-                      width: '80px', 
-                      height: '80px',
-                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                      margin: '0 auto',
-                      fontSize: '2rem'
-                    }}>👨‍💼</div>
+          <div className="row g-5 align-items-center">
+            <div className="col-lg-6">
+              <h3 className="h2 fw-bold mb-4">The Science of Sound Healing</h3>
+              <p className="mb-4">
+                Sound healing is an ancient practice that uses vibrational frequencies to restore harmony to the body, mind, and spirit. 
+                Our authentic Tibetan singing bowls, crystal chimes, and sacred instruments create therapeutic vibrations that:
+              </p>
+              <ul className="list-unstyled">
+                <li className="mb-3 d-flex align-items-start">
+                  <span className="me-3 flex-shrink-0">🎵</span>
+                  <div>
+                    <strong>Balance Chakras:</strong> Each instrument is tuned to specific frequencies that resonate with your energy centers
                   </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
+                </li>
+                <li className="mb-3 d-flex align-items-start">
+                  <span className="me-3 flex-shrink-0">🧘‍♀️</span>
+                  <div>
+                    <strong>Reduce Stress:</strong> Sound vibrations activate the parasympathetic nervous system, promoting deep relaxation
                   </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>David Wilson</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Corporate Executive, London</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The chakra balancing session helped me find inner peace amidst my busy corporate life. 
-                    I feel more centered and focused than ever."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #9C27B0, #BA68C8)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🧘 Chakra Healing</div>
-                </div>
-              </div>
+                </li>
+                <li className="mb-3 d-flex align-items-start">
+                  <span className="me-3 flex-shrink-0">💫</span>
+                  <div>
+                    <strong>Enhance Meditation:</strong> Sacred sounds help quiet the mind and achieve deeper states of consciousness
+                  </div>
+                </li>
+                <li className="mb-3 d-flex align-items-start">
+                  <span className="me-3 flex-shrink-0">🌟</span>
+                  <div>
+                    <strong>Promote Healing:</strong> Vibrational therapy supports cellular regeneration and emotional release
+                  </div>
+                </li>
+              </ul>
             </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
-                      width: '80px', 
-                      height: '80px',
-                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                      margin: '0 auto',
-                      fontSize: '2rem'
-                    }}>👩‍🎨</div>
+            <div className="col-lg-6">
+              <div className="text-center">
+                <div className="position-relative d-inline-block">
+                  <div 
+                    className="rounded-circle mx-auto shadow-lg" 
+                    style={{
+                      width: '400px',
+                      height: '400px',
+                      background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+                      backdropFilter: 'blur(10px)',
+                      border: '2px solid rgba(255, 255, 255, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <div className="text-center">
+                      <span style={{ fontSize: '120px', opacity: '0.8' }}>🎶</span>
+                      <div className="mt-3">
+                        <p className="fw-bold mb-0">Sacred Vibrations</p>
+                        <p className="small mb-0">432 Hz Healing Frequency</p>
+                      </div>
+                    </div>
+                    
+                    <div className="position-absolute" style={{ top: '20%', left: '15%', animationDelay: '0s' }}>
+                      <span style={{ fontSize: '30px', opacity: '0.6' }}>🕉️</span>
+                    </div>
+                    <div className="position-absolute" style={{ top: '30%', right: '20%', animationDelay: '1s' }}>
+                      <span style={{ fontSize: '25px', opacity: '0.5' }}>🔔</span>
+                    </div>
+                    <div className="position-absolute" style={{ bottom: '25%', left: '20%', animationDelay: '2s' }}>
+                      <span style={{ fontSize: '35px', opacity: '0.7' }}>🎵</span>
+                    </div>
+                    <div className="position-absolute" style={{ bottom: '20%', right: '15%', animationDelay: '0.5s' }}>
+                      <span style={{ fontSize: '28px', opacity: '0.6' }}>✨</span>
+                    </div>
                   </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Elena Rodriguez</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Artist & Healer, Barcelona</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The Tibetan singing bowls have become an integral part of my artistic process. 
-                    They inspire creativity and bring such peaceful energy."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #E91E63, #F06292)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🎨 Creative Healing</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
-                      width: '80px', 
-                      height: '80px',
-                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                      margin: '0 auto',
-                      fontSize: '2rem'
-                    }}>👨‍⚕️</div>
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Dr. Raj Patel</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Ayurvedic Doctor, Toronto</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "As a practitioner myself, I can vouch for the authenticity and quality. 
-                    The holistic wellness programs are excellently designed."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #00BCD4, #4DD0E1)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🩺 Professional Review</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 3 */}
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
-                      width: '80px', 
-                      height: '80px',
-                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                      margin: '0 auto',
-                      fontSize: '2rem'
-                    }}>👩‍🏫</div>
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Anna Kowalski</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Mindfulness Teacher, Poland</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The meditation instruments collection has enriched my teaching practice tremendously. 
-                    My students love the authentic sound healing sessions."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #8BC34A, #AED581)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🏫 Education Partner</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
-                      width: '80px', 
-                      height: '80px',
-                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                      margin: '0 auto',
-                      fontSize: '2rem'
-                    }}>👨‍💻</div>
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>James Thompson</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Tech Entrepreneur, Australia</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The stress relief from sound healing was immediate. I now use the techniques 
-                    daily to maintain balance in my high-pressure work environment."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #FF5722, #FF8A65)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>💼 Stress Relief</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="card h-100 hover:scale-105" style={{ 
-                background: 'rgba(255, 255, 255, 0.8)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)',
-                borderRadius: '20px',
-                padding: '1.5rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <div className="text-center">
-                  <div className="mb-3">
-                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
-                      width: '80px', 
-                      height: '80px',
-                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
-                      margin: '0 auto',
-                      fontSize: '2rem'
-                    }}>👩‍🎤</div>
-                  </div>
-                  <div className="mb-3">
-                    {renderStars(5)}
-                  </div>
-                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Maria Santos</h5>
-                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Sound Therapist, Brazil</p>
-                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
-                    "The quality and authenticity of these instruments is unmatched. 
-                    They've become the cornerstone of my professional healing practice."
-                  </p>
-                  <div className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #795548, #A1887F)',
-                    color: 'white',
-                    borderRadius: '10px'
-                  }}>🎵 Professional Use</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="row mt-5">
-            <div className="col-12 text-center">
-              <div style={{
-                background: 'rgba(255, 255, 255, 0.9)',
-                borderRadius: '20px',
-                padding: '2rem',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(232, 244, 253, 0.5)'
-              }}>
-                <h4 className="font-heading fw-bold mb-3" style={{ color: '#1A2B42' }}>
-                  Join Our Growing Community of Happy Clients
-                </h4>
-                <p style={{ color: '#1A2B42', opacity: '0.7', marginBottom: '1.5rem' }}>
-                  Experience the transformative power of authentic Ayurvedic healing and sound therapy
-                </p>
-                <div className="d-flex gap-3 justify-content-center flex-wrap">
-                  <a href="#products" className="btn btn-primary" style={{
-                    borderRadius: '12px',
-                    padding: '12px 24px'
-                  }}>
-                    <span>🛒 Shop Sacred Tools</span>
-                  </a>
-                  <a href="/healing-services" className="btn btn-outline-primary" style={{
-                    borderRadius: '12px',
-                    padding: '12px 24px'
-                  }}>
-                    <span>📅 Book Consultation</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mt-5">
+            <a href="/healing-services" className="btn btn-warning btn-lg px-5 py-3 rounded-pill me-3" style={{
+              boxShadow: '0 4px 15px rgba(255, 193, 7, 0.4)',
+              border: 'none',
+              fontSize: '1.1rem',
+              fontWeight: '600'
+            }}>
+              Book Sound Healing Session
+            </a>
+            <a href="#products" className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill" style={{
+              borderWidth: '2px',
+              fontSize: '1.1rem',
+              fontWeight: '600'
+            }}>
+              Shop Instruments
+            </a>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-5" style={{ 
-        background: 'var(--gradient-overlay)',
-        position: 'relative'
+      <section id="faq" className="py-5" style={{
+        background: 'linear-gradient(135deg, var(--background-primary), var(--background-secondary))'
       }}>
         <div className="container">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h2 className="display-4 font-heading fw-bold mb-3" style={{
-                background: 'var(--gradient-primary)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                ❓ Frequently Asked Questions
-              </h2>
-              <p className="fs-5" style={{ color: 'var(--secondary-text)', maxWidth: '600px', margin: '0 auto' }}>
-                Everything you need to know about our healing services and sacred instruments
-              </p>
-            </div>
+          <div className="text-center mb-5">
+            <h2 className="display-4 fw-bold mb-3" style={{
+              color: 'var(--primary)',
+              fontFamily: '"Playfair Display", serif'
+            }}>
+              Frequently Asked Questions
+            </h2>
+            <p className="lead" style={{ color: 'var(--text-secondary)' }}>
+              Everything you need to know about our Ayurvedic treatments and sacred instruments
+            </p>
           </div>
-          
-          <div className="row">
-            <div className="col-lg-8 mx-auto">
+
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
               <div className="accordion" id="faqAccordion">
                 <div className="accordion-item mb-3" style={{ 
                   background: 'var(--gradient-card)',
@@ -1595,14 +1061,14 @@ const Index = () => {
                       fontWeight: '600',
                       color: 'var(--primary-text)'
                     }}>
-                      ✨ Are your singing bowls authentic?
+                      🏔️ Why choose Rishikesh for healing treatments?
                     </button>
                   </h2>
                   <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
-                      Yes, all our singing bowls are handcrafted by traditional artisans using ancient techniques. Each bowl 
-                      is made from seven sacred metals and tuned to specific chakra frequencies. We provide certificates of 
-                      authenticity and detailed information about each instrument's origin and properties.
+                      Rishikesh is known as the "Yoga Capital of the World" and sits at the foothills of the Himalayas beside 
+                      the sacred Ganges River. The pure mountain air, spiritual energy, and ancient traditions create an ideal 
+                      environment for healing and transformation that cannot be replicated elsewhere.
                     </div>
                   </div>
                 </div>
@@ -1621,40 +1087,14 @@ const Index = () => {
                       fontWeight: '600',
                       color: 'var(--primary-text)'
                     }}>
-                      📍 Do you offer online consultations?
+                      🎶 How do I choose the right singing bowl?
                     </button>
                   </h2>
                   <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
-                      Yes, we offer virtual Ayurvedic consultations and sound healing guidance sessions. Our experienced 
-                      practitioners can provide personalized recommendations, dosha analysis, and teach you how to use 
-                      our instruments for maximum healing benefit from anywhere in the world.
-                    </div>
-                  </div>
-                </div>
-
-                <div className="accordion-item mb-3" style={{ 
-                  background: 'var(--gradient-card)',
-                  border: 'none',
-                  borderRadius: '15px',
-                  overflow: 'hidden',
-                  boxShadow: 'var(--shadow-gradient)'
-                }}>
-                  <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style={{
-                      background: 'transparent',
-                      border: 'none',
-                      fontWeight: '600',
-                      color: 'var(--primary-text)'
-                    }}>
-                      🏔️ Why choose Rishikesh for healing?
-                    </button>
-                  </h2>
-                  <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div className="accordion-body" style={{ color: 'var(--secondary-text)' }}>
-                      Rishikesh is known as the "Yoga Capital of the World" and sits at the foothills of the Himalayas along 
-                      the sacred Ganges River. The high vibrational energy, pure environment, and spiritual atmosphere create 
-                      the perfect conditions for deep healing and transformation.
+                      Choose a singing bowl based on your intention and chakra focus. Each bowl resonates at specific frequencies 
+                      that correspond to different energy centers. We provide detailed guidance and can help you select the perfect 
+                      bowl for your healing journey through personal consultation.
                     </div>
                   </div>
                 </div>
@@ -1664,240 +1104,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className="py-5" style={{
-        background: 'linear-gradient(135deg, var(--background-primary), var(--background-secondary))'
-      }}>
-        <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="display-4 fw-bold mb-3" style={{
-              color: 'var(--primary)',
-              fontFamily: "'Playfair Display', serif"
-            }}>
-              Sacred Healing Gallery
-            </h2>
-            <p className="lead" style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-              Explore our authentic collection of sacred healing instruments, Ayurvedic products, and spiritual wellness tools from the sacred lands of Rishikesh
-            </p>
-          </div>
-
-          <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '300px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/e6618e64-557c-44bd-82f9-fd02c0157617.png" 
-                  alt="Sacred Tibetan Singing Bowls Collection"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h5 className="fw-bold mb-2">Tibetan Singing Bowls</h5>
-                    <p className="mb-0 small">Sacred sound healing instruments with intricate Om patterns</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '300px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/5ef54680-537f-4f35-82d7-b50f9aaaa0f2.png" 
-                  alt="Ayurvedic Products and Essential Oils"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h5 className="fw-bold mb-2">Ayurvedic Collection</h5>
-                    <p className="mb-0 small">Premium herbal remedies and essential oils from ancient traditions</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '300px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/e2046780-e5ab-45c7-80df-d07682091259.png" 
-                  alt="Traditional Copper Vessels and Singing Bowls"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h5 className="fw-bold mb-2">Copper Healing Vessels</h5>
-                    <p className="mb-0 small">Traditional copper instruments for Ayurvedic water therapy</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '300px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/683ade18-1f83-4181-b748-5b23277be90b.png" 
-                  alt="Sanskrit Engraved Singing Bowls"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h5 className="fw-bold mb-2">Sacred Mantra Bowls</h5>
-                    <p className="mb-0 small">Hand-engraved bowls with ancient Sanskrit mantras</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '300px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/41bf1c79-45aa-48ad-ab3a-be45c603bda6.png" 
-                  alt="Crystal and Golden Healing Bowls"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h5 className="fw-bold mb-2">Crystal Healing Bowls</h5>
-                    <p className="mb-0 small">Premium crystal and brass bowls for sound therapy</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '300px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/997a1729-a988-4cd8-baa0-735645335543.png" 
-                  alt="Meditation Cushions and Sacred Instruments"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h5 className="fw-bold mb-2">Meditation Essentials</h5>
-                    <p className="mb-0 small">Comfortable meditation cushions and spiritual accessories</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '350px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/58a8d914-a14f-45bc-bd8e-cc713afa3509.png" 
-                  alt="Our Sacred Healing Center in Rishikesh"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h4 className="fw-bold mb-2">Our Sacred Space</h4>
-                    <p className="mb-0">Experience authentic healing in our traditional Rishikesh center, where ancient wisdom meets modern wellness</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
-                height: '350px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-              }}>
-                <img 
-                  src="/lovable-uploads/4e741671-4e6f-4073-9820-fc6603bf5ef1.png" 
-                  alt="Traditional Healing Setup with Sacred Bowls"
-                  className="w-100 h-100"
-                  style={{ 
-                    objectFit: 'cover',
-                    transition: 'transform 0.3s ease'
-                  }}
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
-                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))'
-                }}>
-                  <div className="p-4 text-white">
-                    <h4 className="fw-bold mb-2">Healing Traditions</h4>
-                    <p className="mb-0">Witness the authentic preparation and use of traditional healing instruments in our sacred ceremonies</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-5">
-            <a href="#contact" className="btn btn-primary btn-lg px-5 py-3 rounded-pill" style={{
-              background: 'var(--gradient-primary)',
-              border: 'none',
-              boxShadow: 'var(--shadow-elegant)',
-              fontSize: '1.1rem',
-              fontWeight: '600'
-            }}>
-              Visit Our Sacred Space
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Footer with Keywords and SEO */}
+      {/* Enhanced Footer */}
       <footer style={{ 
         background: 'var(--gradient-primary)',
         color: 'var(--light-text)',
@@ -1910,26 +1117,30 @@ const Index = () => {
                 background: 'var(--gradient-warm)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                fontSize: '1.5rem'
+                WebkitTextFillColor: 'transparent'
               }}>
-                🕉️ Nityam Wellness
+                🧘‍♀️ Nityam Veda
               </h5>
-              <p className="mb-4" style={{ lineHeight: '1.6' }}>
-                Authentic Ayurvedic treatments, sound healing therapy, and sacred meditation instruments 
-                in the spiritual heart of Rishikesh. Experience ancient wisdom for modern wellness.
+              <p className="mb-4" style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.6' }}>
+                Authentic Ayurvedic Treatment Center & Sound Healing Sanctuary in the sacred city of Rishikesh. 
+                Experience ancient healing wisdom through traditional Panchakarma, sacred sound therapy, and spiritual wellness practices.
               </p>
-              <div className="d-flex gap-3 mb-4">
+              <div className="d-flex gap-3">
                 <a href="#" style={{ 
                   color: 'var(--light-text)', 
                   fontSize: '1.5rem',
                   transition: 'transform 0.3s ease'
-                }} className="hover:scale-110">📧</a>
+                }} className="hover:scale-110">📘</a>
                 <a href="#" style={{ 
                   color: 'var(--light-text)', 
                   fontSize: '1.5rem',
                   transition: 'transform 0.3s ease'
-                }} className="hover:scale-110">📱</a>
+                }} className="hover:scale-110">📷</a>
+                <a href="#" style={{ 
+                  color: 'var(--light-text)', 
+                  fontSize: '1.5rem',
+                  transition: 'transform 0.3s ease'
+                }} className="hover:scale-110">🐦</a>
                 <a href="#" style={{ 
                   color: 'var(--light-text)', 
                   fontSize: '1.5rem',
