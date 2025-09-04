@@ -8,6 +8,9 @@ import naturalPerfumes from "@/assets/natural-perfumes.jpg";
 import essentialOilsSet from "@/assets/essential-oils-set.jpg";
 import spiritualIncense from "@/assets/spiritual-incense.jpg";
 import copperWaterBottle from "@/assets/copper-water-bottle.jpg";
+import heroAyurvedaSpa from "@/assets/hero-ayurveda-spa.jpg";
+import heroMeditationRishikesh from "@/assets/hero-meditation-rishikesh.jpg";
+import heroAyurvedicHealing from "@/assets/hero-ayurvedic-healing.jpg";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -145,6 +148,9 @@ const Index = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link fw-medium" href="#products" style={{ color: 'var(--primary-text)' }}>Sacred Tools</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link fw-medium" href="#gallery" style={{ color: 'var(--primary-text)' }}>Gallery</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link fw-medium" href="#healing" style={{ color: 'var(--primary-text)' }}>Sound Healing</a>
@@ -1654,6 +1660,239 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section id="gallery" className="py-5" style={{
+        background: 'linear-gradient(135deg, var(--background-primary), var(--background-secondary))'
+      }}>
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="display-4 fw-bold mb-3" style={{
+              color: 'var(--primary)',
+              fontFamily: "'Playfair Display', serif"
+            }}>
+              Sacred Healing Gallery
+            </h2>
+            <p className="lead" style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+              Explore our authentic collection of sacred healing instruments, Ayurvedic products, and spiritual wellness tools from the sacred lands of Rishikesh
+            </p>
+          </div>
+
+          <div className="row g-4">
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/e6618e64-557c-44bd-82f9-fd02c0157617.png" 
+                  alt="Sacred Tibetan Singing Bowls Collection"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Tibetan Singing Bowls</h5>
+                    <p className="mb-0 small">Sacred sound healing instruments with intricate Om patterns</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/5ef54680-537f-4f35-82d7-b50f9aaaa0f2.png" 
+                  alt="Ayurvedic Products and Essential Oils"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Ayurvedic Collection</h5>
+                    <p className="mb-0 small">Premium herbal remedies and essential oils from ancient traditions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/e2046780-e5ab-45c7-80df-d07682091259.png" 
+                  alt="Traditional Copper Vessels and Singing Bowls"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Copper Healing Vessels</h5>
+                    <p className="mb-0 small">Traditional copper instruments for Ayurvedic water therapy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/683ade18-1f83-4181-b748-5b23277be90b.png" 
+                  alt="Sanskrit Engraved Singing Bowls"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Sacred Mantra Bowls</h5>
+                    <p className="mb-0 small">Hand-engraved bowls with ancient Sanskrit mantras</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/41bf1c79-45aa-48ad-ab3a-be45c603bda6.png" 
+                  alt="Crystal and Golden Healing Bowls"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Crystal Healing Bowls</h5>
+                    <p className="mb-0 small">Premium crystal and brass bowls for sound therapy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '300px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/997a1729-a988-4cd8-baa0-735645335543.png" 
+                  alt="Meditation Cushions and Sacred Instruments"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.7))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h5 className="fw-bold mb-2">Meditation Essentials</h5>
+                    <p className="mb-0 small">Comfortable meditation cushions and spiritual accessories</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '350px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/58a8d914-a14f-45bc-bd8e-cc713afa3509.png" 
+                  alt="Our Sacred Healing Center in Rishikesh"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h4 className="fw-bold mb-2">Our Sacred Space</h4>
+                    <p className="mb-0">Experience authentic healing in our traditional Rishikesh center, where ancient wisdom meets modern wellness</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6">
+              <div className="gallery-item position-relative overflow-hidden rounded-4 shadow-lg hover-scale" style={{
+                height: '350px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <img 
+                  src="/lovable-uploads/4e741671-4e6f-4073-9820-fc6603bf5ef1.png" 
+                  alt="Traditional Healing Setup with Sacred Bowls"
+                  className="w-100 h-100"
+                  style={{ 
+                    objectFit: 'cover',
+                    transition: 'transform 0.3s ease'
+                  }}
+                />
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end" style={{
+                  background: 'linear-gradient(transparent, rgba(0,0,0,0.8))'
+                }}>
+                  <div className="p-4 text-white">
+                    <h4 className="fw-bold mb-2">Healing Traditions</h4>
+                    <p className="mb-0">Witness the authentic preparation and use of traditional healing instruments in our sacred ceremonies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-5">
+            <a href="#contact" className="btn btn-primary btn-lg px-5 py-3 rounded-pill" style={{
+              background: 'var(--gradient-primary)',
+              border: 'none',
+              boxShadow: 'var(--shadow-elegant)',
+              fontSize: '1.1rem',
+              fontWeight: '600'
+            }}>
+              Visit Our Sacred Space
+            </a>
           </div>
         </div>
       </section>
