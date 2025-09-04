@@ -344,14 +344,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #8B4513, #A0522D)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🧘‍♀️</div>
+                  <img 
+                    src="/src/assets/cork-yoga-mat.jpg" 
+                    alt="Cork Yoga Mat" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3" style={{ zIndex: '3' }}>
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -400,14 +402,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #4A90E2, #7BB3F2)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🧱</div>
+                  <img 
+                    src="/src/assets/yoga-blocks.jpg" 
+                    alt="Yoga Blocks Set" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -455,14 +459,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #9B59B6, #C39BD3)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🎗️</div>
+                  <img 
+                    src="/src/assets/yoga-belt.jpg" 
+                    alt="Yoga Belt" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -510,14 +516,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #16A085, #48C9B0)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🫖</div>
+                  <img 
+                    src="/src/assets/jalneti-pot.jpg" 
+                    alt="Jalneti Pot" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -592,14 +600,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #E8B4F8, #D896FF)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🌸</div>
+                  <img 
+                    src="/src/assets/natural-perfumes.jpg" 
+                    alt="Natural Perfumes" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -647,14 +657,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #58D68D, #82E5AA)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🫙</div>
+                  <img 
+                    src="/src/assets/essential-oils-set.jpg" 
+                    alt="Essential Oils Set" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -702,14 +714,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #F7DC6F, #F8C471)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🔥</div>
+                  <img 
+                    src="/src/assets/spiritual-incense.jpg" 
+                    alt="Spiritual Incense Sticks" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
@@ -757,14 +771,16 @@ const Index = () => {
                 animation: 'fadeInUp 0.8s ease-out both'
               }}>
                 <div className="position-relative">
-                  <div style={{
-                    height: '250px',
-                    background: 'linear-gradient(135deg, #E67E22, #F39C12)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '4rem'
-                  }}>🏺</div>
+                  <img 
+                    src="/src/assets/copper-water-bottle.jpg" 
+                    alt="Copper Water Bottle" 
+                    style={{
+                      width: '100%',
+                      height: '250px',
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }} 
+                  />
                   <div className="position-absolute top-0 end-0 m-3">
                     <span className="badge" style={{ 
                       background: 'rgba(255, 255, 255, 0.9)',
