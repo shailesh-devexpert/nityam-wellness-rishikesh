@@ -516,72 +516,463 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-5" style={{ background: 'linear-gradient(135deg, rgba(210, 105, 30, 0.1), rgba(205, 133, 63, 0.1))' }}>
+      {/* Happy Clients Section */}
+      <section id="testimonials" className="py-5" style={{ 
+        background: 'linear-gradient(135deg, rgba(232, 244, 253, 0.6) 0%, rgba(255, 248, 220, 0.4) 50%, rgba(209, 236, 241, 0.6) 100%)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        {/* Background Decorative Elements */}
+        <div style={{
+          position: 'absolute',
+          top: '10%',
+          right: '5%',
+          width: '180px',
+          height: '180px',
+          background: 'radial-gradient(circle, rgba(255, 248, 220, 0.4) 0%, transparent 70%)',
+          borderRadius: '50%',
+          animation: 'float 10s ease-in-out infinite'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          bottom: '10%',
+          left: '8%',
+          width: '120px',
+          height: '120px',
+          background: 'radial-gradient(circle, rgba(209, 236, 241, 0.3) 0%, transparent 70%)',
+          borderRadius: '50%',
+          animation: 'float 7s ease-in-out infinite reverse'
+        }}></div>
+
         <div className="container">
+          {/* Header Section */}
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="display-4 font-heading fw-bold text-primary mb-3">
-                ⭐ Transformational Stories
+              <h2 className="display-4 font-heading fw-bold mb-4" style={{ 
+                color: '#1A2B42',
+                textShadow: '0 2px 4px rgba(26, 43, 66, 0.1)'
+              }}>
+                😊 Happy Clients Community
               </h2>
-              <p className="fs-5 text-muted">
-                Real experiences from our healing community
-              </p>
+              <div className="row justify-content-center mb-4">
+                <div className="col-lg-8">
+                  <div className="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-3">
+                    <div className="text-center">
+                      <div style={{ 
+                        fontSize: '3rem', 
+                        fontWeight: 'bold',
+                        background: 'linear-gradient(135deg, #1A2B42, #4A90E2)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}>3600+</div>
+                      <div style={{ color: '#1A2B42', fontWeight: '600' }}>Satisfied Clients</div>
+                    </div>
+                    <div style={{ width: '2px', height: '60px', background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)' }}></div>
+                    <div className="text-center">
+                      <div style={{ 
+                        fontSize: '3rem', 
+                        fontWeight: 'bold',
+                        background: 'linear-gradient(135deg, #1A2B42, #4A90E2)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}>50+</div>
+                      <div style={{ color: '#1A2B42', fontWeight: '600' }}>Countries Served</div>
+                    </div>
+                    <div style={{ width: '2px', height: '60px', background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)' }}></div>
+                    <div className="text-center">
+                      <div style={{ 
+                        fontSize: '3rem', 
+                        fontWeight: 'bold',
+                        background: 'linear-gradient(135deg, #1A2B42, #4A90E2)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}>98%</div>
+                      <div style={{ color: '#1A2B42', fontWeight: '600' }}>Success Rate</div>
+                    </div>
+                  </div>
+                  <p className="fs-5 mb-4" style={{ 
+                    color: '#1A2B42', 
+                    opacity: '0.7',
+                    lineHeight: '1.6'
+                  }}>
+                    Join thousands of individuals who have transformed their lives through our authentic Ayurvedic treatments, 
+                    sound healing therapies, and sacred wellness practices. From stress relief to spiritual awakening, 
+                    our clients experience profound healing in the heart of Rishikesh.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           
+          {/* Client Cards Grid */}
           <div className="row g-4">
-            <div className="col-lg-4">
-              <div className="testimonial-card text-center">
-                <div className="mb-3">
-                  <img src="/src/assets/testimonial-1.jpg" alt="Sarah" className="rounded-circle" style={{ width: '80px', height: '80px', objectFit: 'cover' }} />
+            {/* Row 1 */}
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <img src="/src/assets/testimonial-1.jpg" alt="Sarah" className="rounded-circle" style={{ 
+                      width: '80px', 
+                      height: '80px', 
+                      objectFit: 'cover',
+                      border: '3px solid #E8F4FD'
+                    }} />
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Sarah Johnson</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Yoga Teacher, California</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The sound healing session completely transformed my meditation practice. 
+                    The singing bowl creates the most beautiful vibrations."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #4CAF50, #66BB6A)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>✓ Verified Purchase</div>
                 </div>
-                <div className="mb-3">
-                  {renderStars(5)}
-                </div>
-                <h5 className="font-heading fw-bold">Sarah Johnson</h5>
-                <p className="text-muted mb-3">Yoga Teacher, California</p>
-                <p className="font-accent fst-italic">
-                  "The sound healing session completely transformed my meditation practice. 
-                  The singing bowl I purchased creates the most beautiful vibrations."
-                </p>
-                <div className="badge bg-success">Verified Purchase</div>
               </div>
             </div>
             
-            <div className="col-lg-4">
-              <div className="testimonial-card text-center">
-                <div className="mb-3">
-                  <img src="/src/assets/testimonial-2.jpg" alt="Michael" className="rounded-circle" style={{ width: '80px', height: '80px', objectFit: 'cover' }} />
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <img src="/src/assets/testimonial-2.jpg" alt="Michael" className="rounded-circle" style={{ 
+                      width: '80px', 
+                      height: '80px', 
+                      objectFit: 'cover',
+                      border: '3px solid #E8F4FD'
+                    }} />
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Michael Chen</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Meditation Practitioner, Singapore</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "After years of chronic stress, the Panchakarma treatment gave me 
+                    a new lease on life. Truly life-changing experience."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #2196F3, #42A5F5)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🌟 Verified Treatment</div>
                 </div>
-                <div className="mb-3">
-                  {renderStars(5)}
-                </div>
-                <h5 className="font-heading fw-bold">Michael Chen</h5>
-                <p className="text-muted mb-3">Meditation Practitioner, Singapore</p>
-                <p className="font-accent fst-italic">
-                  "After years of chronic stress, the Panchakarma treatment here gave me 
-                  a new lease on life. Truly life-changing experience."
-                </p>
-                <div className="badge bg-success">Verified Treatment</div>
               </div>
             </div>
             
-            <div className="col-lg-4">
-              <div className="testimonial-card text-center">
-                <div className="mb-3">
-                  <img src="/src/assets/testimonial-3.jpg" alt="Priya" className="rounded-circle" style={{ width: '80px', height: '80px', objectFit: 'cover' }} />
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <img src="/src/assets/testimonial-3.jpg" alt="Priya" className="rounded-circle" style={{ 
+                      width: '80px', 
+                      height: '80px', 
+                      objectFit: 'cover',
+                      border: '3px solid #E8F4FD'
+                    }} />
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Priya Sharma</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Wellness Coach, Mumbai</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The authentic instruments and genuine healing approach make this place special. 
+                    I've recommended it to all my clients."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #FF9800, #FFB74D)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🔄 Return Customer</div>
                 </div>
-                <div className="mb-3">
-                  {renderStars(5)}
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
+                      width: '80px', 
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                      margin: '0 auto',
+                      fontSize: '2rem'
+                    }}>👨‍💼</div>
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>David Wilson</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Corporate Executive, London</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The chakra balancing session helped me find inner peace amidst my busy corporate life. 
+                    I feel more centered and focused than ever."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #9C27B0, #BA68C8)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🧘 Chakra Healing</div>
                 </div>
-                <h5 className="font-heading fw-bold">Priya Sharma</h5>
-                <p className="text-muted mb-3">Wellness Coach, Mumbai</p>
-                <p className="font-accent fst-italic">
-                  "The authentic instruments and genuine healing approach make this place special. 
-                  I've recommended it to all my clients."
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
+                      width: '80px', 
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                      margin: '0 auto',
+                      fontSize: '2rem'
+                    }}>👩‍🎨</div>
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Elena Rodriguez</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Artist & Healer, Barcelona</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The Tibetan singing bowls have become an integral part of my artistic process. 
+                    They inspire creativity and bring such peaceful energy."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #E91E63, #F06292)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🎨 Creative Healing</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
+                      width: '80px', 
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                      margin: '0 auto',
+                      fontSize: '2rem'
+                    }}>👨‍⚕️</div>
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Dr. Raj Patel</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Ayurvedic Doctor, Toronto</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "As a practitioner myself, I can vouch for the authenticity and quality. 
+                    The holistic wellness programs are excellently designed."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #00BCD4, #4DD0E1)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🩺 Professional Review</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3 */}
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
+                      width: '80px', 
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                      margin: '0 auto',
+                      fontSize: '2rem'
+                    }}>👩‍🏫</div>
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Anna Kowalski</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Mindfulness Teacher, Poland</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The meditation instruments collection has enriched my teaching practice tremendously. 
+                    My students love the authentic sound healing sessions."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #8BC34A, #AED581)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🏫 Education Partner</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
+                      width: '80px', 
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                      margin: '0 auto',
+                      fontSize: '2rem'
+                    }}>👨‍💻</div>
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>James Thompson</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Tech Entrepreneur, Australia</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The stress relief from sound healing was immediate. I now use the techniques 
+                    daily to maintain balance in my high-pressure work environment."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #FF5722, #FF8A65)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>💼 Stress Relief</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="card h-100 hover:scale-105" style={{ 
+                background: 'rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)',
+                borderRadius: '20px',
+                padding: '1.5rem',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+              }}>
+                <div className="text-center">
+                  <div className="mb-3">
+                    <div className="rounded-circle d-flex align-items-center justify-content-center" style={{ 
+                      width: '80px', 
+                      height: '80px',
+                      background: 'linear-gradient(135deg, #E8F4FD, #D1ECF1)',
+                      margin: '0 auto',
+                      fontSize: '2rem'
+                    }}>👩‍🎤</div>
+                  </div>
+                  <div className="mb-3">
+                    {renderStars(5)}
+                  </div>
+                  <h5 className="font-heading fw-bold" style={{ color: '#1A2B42' }}>Maria Santos</h5>
+                  <p className="mb-3" style={{ color: '#1A2B42', opacity: '0.6', fontSize: '0.9rem' }}>Sound Therapist, Brazil</p>
+                  <p className="font-accent fst-italic" style={{ color: '#1A2B42', opacity: '0.8' }}>
+                    "The quality and authenticity of these instruments is unmatched. 
+                    They've become the cornerstone of my professional healing practice."
+                  </p>
+                  <div className="badge" style={{ 
+                    background: 'linear-gradient(135deg, #795548, #A1887F)',
+                    color: 'white',
+                    borderRadius: '10px'
+                  }}>🎵 Professional Use</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="row mt-5">
+            <div className="col-12 text-center">
+              <div style={{
+                background: 'rgba(255, 255, 255, 0.9)',
+                borderRadius: '20px',
+                padding: '2rem',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(232, 244, 253, 0.5)'
+              }}>
+                <h4 className="font-heading fw-bold mb-3" style={{ color: '#1A2B42' }}>
+                  Join Our Growing Community of Happy Clients
+                </h4>
+                <p style={{ color: '#1A2B42', opacity: '0.7', marginBottom: '1.5rem' }}>
+                  Experience the transformative power of authentic Ayurvedic healing and sound therapy
                 </p>
-                <div className="badge bg-success">Return Customer</div>
+                <div className="d-flex gap-3 justify-content-center flex-wrap">
+                  <a href="#products" className="btn btn-primary" style={{
+                    borderRadius: '12px',
+                    padding: '12px 24px'
+                  }}>
+                    <span>🛒 Shop Sacred Tools</span>
+                  </a>
+                  <a href="/healing-services" className="btn btn-outline-primary" style={{
+                    borderRadius: '12px',
+                    padding: '12px 24px'
+                  }}>
+                    <span>📅 Book Consultation</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
